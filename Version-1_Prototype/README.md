@@ -29,7 +29,7 @@ This prototype served as a proof of concept and provided experience with Bluetoo
 - Wireless Bluetooth audio playback
 - Two-channel stereo audio
 - Two 8-ohm, 1-watt speakers
-- Rechargeable battery-powered operation
+- Battery-powered portable operation
 - External rocker power switch
 - Breadboard-based electronics
 - Modified food-container enclosure
@@ -64,52 +64,66 @@ Individual modules were connected using jumper wires and soldered connections. T
 
 ---
 
-## Power Control
+## Power System
 
 ![JF Audio V1 Power Switch](Photos/v1_power_switch.jpg)
 
-An external rocker switch provides the primary user-accessible power control. However, the internal battery power module must first be activated using its onboard push button before power reaches the external switch.
+Version 1 uses a battery-powered system but does **not** include an integrated rechargeable battery system.
 
-Once the internal power module is activated, the external rocker switch can control power to the speaker electronics.
+The original design considered using an Adafruit PowerBoost 1000C to provide regulated power and battery charging. However, the PowerBoost could not be implemented in Version 1 because the required materials were not available during the original build.
 
-This arrangement worked for the prototype but introduced an inconvenience because the enclosure must be opened whenever the battery module requires manual activation.
+Instead, the prototype uses the available battery power hardware. The internal battery power module must first be activated using its onboard push button before power is supplied to the external rocker switch.
+
+Once the internal power module is activated, the external rocker switch provides user-accessible control of power to the speaker electronics.
+
+This arrangement successfully powered the prototype but introduced two important limitations:
+
+1. The enclosure may need to be opened to access the internal power-module button.
+2. The speaker does not provide an integrated method for recharging its batteries.
+
+Both limitations became design goals for Version 2.
 
 ---
 
 ## Lessons Learned
 
-Version 1 successfully demonstrated that the overall Bluetooth speaker concept could work, while also revealing several areas for improvement.
+Version 1 successfully demonstrated that the overall Bluetooth speaker concept could work while also revealing several areas for improvement.
 
 - Breadboard and jumper-wire construction requires significant enclosure space.
 - Large amounts of wiring make assembly and troubleshooting more difficult.
 - Proper grounding and power distribution are important for minimizing unwanted audio noise.
-- Component placement and wire management have a significant effect on the organization of the final assembly.
-- A dedicated PCB can significantly reduce wiring and improve reliability.
+- Component placement and wire management significantly affect the organization of the final assembly.
+- A dedicated PCB can reduce wiring and improve reliability.
 - A purpose-built enclosure can provide better component mounting and a cleaner finished product.
-- The power system required access to an internal push button before the external power switch could operate, motivating a more integrated and accessible power-control design for future revisions.
+- The internal battery module requires manual activation before the external power switch can operate.
+- The lack of integrated battery charging reduces the convenience of the portable design.
 - Building a functional prototype before designing a PCB helped identify electrical and mechanical improvements for the next version.
 
-These observations directly influenced the development of **JF Audio Version 2**, which transitions from a breadboard-based prototype to a custom-designed PCB and a dedicated plastic enclosure.
+These observations directly influenced the development of **JF Audio Version 2**.
 
 ---
 
 ## Version Progression
 
-**Version 1 - Prototype**
+### Version 1 - Prototype
 
-Breadboard-based electronics, off-the-shelf modules, hand wiring, and a modified food-container enclosure.
+Breadboard-based electronics, off-the-shelf modules, hand wiring, battery-powered operation, two 8-ohm 1-watt speakers, and a modified food-container enclosure.
 
-↓
-
-**Version 2 - Custom PCB**
-
-Custom PCB design, improved component organization, reduced wiring, and a dedicated plastic enclosure.
+**Primary objective:** Prove that the Bluetooth speaker concept works.
 
 ↓
 
-**Version 3 - Future Development**
+### Version 2 - Custom PCB
 
-Planned improvements will focus on further integration, improved audio performance, power management, enclosure design, and additional user features.
+Custom PCB design, dedicated plastic enclosure, improved component organization, reduced wiring, and an Adafruit PowerBoost 1000C providing an integrated rechargeable battery power system.
+
+**Primary objective:** Transform the working prototype into a cleaner and more integrated hardware design.
+
+↓
+
+### Version 3 - Future Development
+
+Future improvements are currently being explored, with potential focus areas including improved audio performance, greater hardware integration, enhanced power management, custom enclosure design, and additional user features.
 
 ---
 
