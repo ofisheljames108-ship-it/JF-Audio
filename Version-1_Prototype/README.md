@@ -1,14 +1,12 @@
 # JF Audio Version 1 - Prototype
 
-![JF Audio Version 1 Finished Speaker](Photos/v1_finished_speaker.jpg)
-
 ## Overview
 
 Version 1 of JF Audio was the first working prototype of my portable Bluetooth speaker project. The goal of this version was to build a functional Bluetooth speaker using off-the-shelf modules and readily available materials before moving toward a custom PCB design.
 
 The electronics were assembled primarily using a breadboard and jumper wires and were housed inside a modified plastic food container. Two 8-ohm, 1-watt speakers were mounted to the lid of the enclosure.
 
-This prototype served as a proof of concept and provided experience with Bluetooth audio, audio amplification, battery-powered electronics, soldering, power distribution, and physical assembly.
+This prototype served as a proof of concept and provided experience with Bluetooth audio, audio amplification, battery-powered electronics, soldering, power distribution, grounding, and physical assembly.
 
 ---
 
@@ -30,15 +28,51 @@ This prototype served as a proof of concept and provided experience with Bluetoo
 - Two-channel stereo audio
 - Two 8-ohm, 1-watt speakers
 - Battery-powered portable operation
-- External rocker power switch
+- External SPST rocker power switch
 - Breadboard-based electronics
 - Modified food-container enclosure
 
 ---
 
-## Internal Electronics
+## System Architecture
 
-![JF Audio V1 Internal Layout](Photos/v1_internal_layout.jpg)
+The Version 1 audio system consists of four main sections: the battery and power supply, Bluetooth receiver, audio amplifier, and speakers.
+
+Four AA batteries provide approximately 6 V nominal to a 5 V power supply module. The power supply provides a regulated 5 V output for the speaker electronics. An external SPST rocker switch is placed in the regulated power path to provide user-accessible power control.
+
+The M18 Bluetooth module receives wireless audio from a Bluetooth-enabled device and provides separate left and right analog audio signals. These signals are connected to the left and right inputs of the PAM8403 stereo Class-D audio amplifier.
+
+The PAM8403 amplifies the two audio channels and drives two 8-ohm, 1-watt speakers.
+
+### Signal and Power Flow
+
+`4x AA Batteries (6 V) → 5 V Power Supply → SPST Switch → Bluetooth Receiver / Audio Amplifier → Speakers`
+
+---
+
+## Circuit Schematic
+
+The complete Version 1 electrical system is shown below.
+
+![JF Audio Version 1 Circuit Schematic](Schematics/JF_Audio_V1_Schematic.png)
+
+The original LTspice schematic and the custom LTspice symbols used to create the diagram are included in the `Schematics` directory.
+
+The schematic documents the major electrical connections between:
+
+- 4x AA battery pack
+- 5 V power supply
+- SPST rocker switch
+- M18 Bluetooth module
+- PAM8403 stereo audio amplifier
+- Left 8-ohm speaker
+- Right 8-ohm speaker
+
+The PAM8403 uses differential speaker outputs, with each speaker connected between the positive and negative output terminals of its respective amplifier channel.
+
+---
+
+## Internal Electronics
 
 Version 1 used a breadboard-based design with individual modules connected using jumper wires. This approach allowed the circuit to be modified and troubleshot easily during development.
 
@@ -48,8 +82,6 @@ Although this worked well for prototyping, the large number of individual wires 
 
 ## Breadboard Wiring
 
-![JF Audio V1 Breadboard Wiring](Photos/v1_breadboard_wiring.jpg)
-
 The amplifier, Bluetooth receiver, and power circuitry were interconnected using a combination of breadboard connections, jumper wires, and soldered wiring.
 
 The breadboard approach provided flexibility during initial testing and made it possible to verify the operation of individual sections of the speaker before creating a more permanent design.
@@ -58,21 +90,21 @@ The breadboard approach provided flexibility during initial testing and made it 
 
 ## Module Connections
 
-![JF Audio V1 Module Connections](Photos/v1_module_connections.jpg)
-
 Individual modules were connected using jumper wires and soldered connections. This allowed the Bluetooth receiver, audio amplifier, speakers, and power system to operate as a complete system while still allowing components to be disconnected or modified during troubleshooting.
 
 ---
 
 ## Power System
 
-![JF Audio V1 Power Switch](Photos/v1_power_switch.jpg)
+Version 1 uses four AA batteries connected in series, providing approximately 6 V nominal.
 
-Version 1 uses a battery-powered system but does **not** include an integrated rechargeable battery system.
+The battery pack supplies a 5 V power supply module, which provides regulated 5 V power for the Bluetooth receiver and audio amplifier.
+
+Version 1 does **not** include an integrated rechargeable battery system.
 
 The original design considered using an Adafruit PowerBoost 1000C to provide regulated power and battery charging. However, the PowerBoost could not be implemented in Version 1 because the required materials were not available during the original build.
 
-Instead, the prototype uses the available battery power hardware. The internal battery power module must first be activated using its onboard push button before power is supplied to the external rocker switch.
+Instead, the prototype uses the available battery power hardware. The internal power module must first be activated using its onboard push button before power is supplied through the external rocker switch.
 
 Once the internal power module is activated, the external rocker switch provides user-accessible control of power to the speaker electronics.
 
