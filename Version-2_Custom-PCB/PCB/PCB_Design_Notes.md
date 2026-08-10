@@ -34,7 +34,7 @@ The primary objectives of the PCB were:
 
 ## Top PCB Layout
 
-![JF Audio Version 2 PCB Top Layout](Images/PCB_2D_Top.png)
+![JF Audio Version 2 PCB Top Layout](Photos/PCB_2D_Top.png)
 
 The top PCB layout shows the component footprints, copper traces, through-hole connections, mounting holes, and amplifier circuitry.
 
@@ -46,7 +46,7 @@ Component placement was selected to keep related components close together and r
 
 ## Top PCB 3D Model
 
-![JF Audio Version 2 PCB 3D Top](Images/PCB_3D_Top.png)
+![JF Audio Version 2 PCB 3D Top](Photos/PCB_3D_Top.png)
 
 The EasyEDA 3D model was used to inspect the physical arrangement of the components before the PCB was submitted for fabrication.
 
@@ -66,7 +66,7 @@ This provided an additional design review before manufacturing the physical boar
 
 ## Bottom PCB Layout
 
-![JF Audio Version 2 PCB Bottom Layout](Images/PCB_2D_Bottom.png)
+![JF Audio Version 2 PCB Bottom Layout](Photos/PCB_2D_Bottom.png)
 
 The bottom PCB layout contains additional routing, vias, through-hole connections, and project identification.
 
@@ -78,7 +78,7 @@ Vias were used where necessary to transition electrical connections between the 
 
 ## Bottom PCB 3D Model
 
-![JF Audio Version 2 PCB 3D Bottom](Images/PCB_3D_Bottom.png)
+![JF Audio Version 2 PCB 3D Bottom](Photos/PCB_3D_Bottom.png)
 
 The bottom side of the PCB includes custom project identification.
 
@@ -328,7 +328,7 @@ before being submitted for manufacturing.
 
 The PCB includes custom silkscreen markings to identify the project and board revision.
 
-![JF Audio Version 2 Bottom Silkscreen](Images/PCB_3D_Bottom.png)
+![JF Audio Version 2 Bottom Silkscreen](Photos/PCB_3D_Bottom.png)
 
 The bottom side includes:
 
