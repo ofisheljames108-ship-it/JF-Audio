@@ -24,74 +24,111 @@ The primary objectives of the PCB were:
 - Provide connections for the rechargeable power system
 - Improve power and ground distribution
 - Use wider traces for higher-current paths
-- Maintain clear separation and organization of the audio and power sections
-- Create a PCB that could be mounted inside a dedicated enclosure
+- Maintain organized audio and power routing
+- Create a PCB that can be mounted inside a dedicated enclosure
 - Gain experience with schematic capture, footprint creation, PCB routing, vias, copper regions, and DRC
 
 ---
 
-## PCB Layout
+# PCB Design
 
-### Top Layer
+## Top PCB Layout
 
-![JF Audio V2 PCB Top Layout](Images/PCB_2D_Top.png)
+![JF Audio Version 2 PCB Top Layout](Images/PCB_2D_Top.png)
 
-The top layer contains the primary component footprints and a significant portion of the signal and power routing.
+The top PCB layout shows the component footprints, copper traces, through-hole connections, mounting holes, and amplifier circuitry.
+
+The amplifier was positioned near the center of the PCB with its supporting passive components located nearby. Connections for the Bluetooth module, speakers, battery, external switch, and power system were positioned around the perimeter of the board where practical.
 
 Component placement was selected to keep related components close together and reduce unnecessary trace lengths.
 
-Particular attention was given to the placement of the passive components surrounding the audio amplifier IC.
-
 ---
 
-## 3D PCB Model
+## Top PCB 3D Model
 
-![JF Audio V2 PCB 3D Top](Images/PCB_3D_Top.png)
+![JF Audio Version 2 PCB 3D Top](Images/PCB_3D_Top.png)
 
-The EasyEDA 3D model was used to inspect the physical layout of the board before fabrication.
+The EasyEDA 3D model was used to inspect the physical arrangement of the components before the PCB was submitted for fabrication.
 
-The 3D view helped verify:
+The 3D model helped verify:
 
-- General component placement
+- Component placement
+- Component orientation
 - Connector locations
 - Component spacing
 - Mounting-hole locations
 - Silkscreen placement
-- Overall PCB proportions
+- Overall PCB dimensions and proportions
+
+This provided an additional design review before manufacturing the physical board.
 
 ---
+
+## Bottom PCB Layout
+
+![JF Audio Version 2 PCB Bottom Layout](Images/PCB_2D_Bottom.png)
+
+The bottom PCB layout contains additional routing, vias, through-hole connections, and project identification.
+
+The use of both PCB layers made it possible to route connections that would have been difficult to complete entirely on a single layer.
+
+Vias were used where necessary to transition electrical connections between the top and bottom copper layers.
+
+---
+
+## Bottom PCB 3D Model
+
+![JF Audio Version 2 PCB 3D Bottom](Images/PCB_3D_Bottom.png)
+
+The bottom side of the PCB includes custom project identification.
+
+The silkscreen includes:
+
+- CSUSM
+- JF Audio
+- MRK II
+
+The **MRK II** designation identifies the PCB as part of the second major hardware revision of the JF Audio speaker.
+
+---
+
+# Audio System
 
 ## Audio Amplifier Section
 
-Unlike Version 1, which used a complete PAM8403 amplifier module, Version 2 integrates the amplifier IC and its required supporting components directly onto the custom PCB.
+Unlike Version 1, which used a complete PAM8403 amplifier module, Version 2 integrates the audio amplifier IC and its supporting components directly onto the custom PCB.
 
-The amplifier section includes the external passive components required for the audio and power connections.
+This reduces dependence on a separate amplifier breakout board and allows the amplifier circuitry to become part of the main speaker PCB.
 
-Component placement around the amplifier was kept compact, particularly for components associated with power decoupling and the audio signal path.
-
-This approach reduces dependence on a separate amplifier module and provides greater control over the physical PCB layout.
-
----
-
-## Capacitor Placement
-
-Capacitor placement was an important consideration during the PCB design.
-
-Power-related capacitors were placed close to the amplifier IC and associated supply connections to reduce the length of the current paths between the capacitors and the device.
-
-The smaller capacitors associated with the amplifier circuitry were also positioned close to their corresponding pins and resistors where practical.
-
-A larger bulk capacitor is included on the power rail to help support the amplifier during changing load conditions.
+The supporting passive components were positioned near the amplifier where practical to reduce unnecessary trace lengths and maintain an organized audio section.
 
 ---
 
 ## Audio Signal Routing
 
-The PCB provides separate left and right audio paths between the Bluetooth receiver connections and the amplifier inputs.
+The PCB provides separate left and right audio paths between the Bluetooth receiver and the amplifier.
 
-The audio section was routed with the goal of keeping the signal paths organized and avoiding unnecessary routing through higher-current sections of the board.
+The signal flow can be represented as:
 
-The left and right amplifier outputs are routed to dedicated speaker connections.
+Bluetooth Receiver
+
+↓
+
+Left / Right Audio Signals
+
+↓
+
+Audio Amplifier
+
+↓
+
+Left / Right Amplified Outputs
+
+↓
+
+Speakers
+
+The audio-input traces were routed separately from the higher-current speaker-output paths where practical.
 
 ---
 
@@ -99,212 +136,279 @@ The left and right amplifier outputs are routed to dedicated speaker connections
 
 The amplifier provides separate positive and negative outputs for each speaker channel.
 
-The PCB therefore provides:
+The PCB therefore provides connections for:
 
 - Left Speaker +
 - Left Speaker -
 - Right Speaker +
 - Right Speaker -
 
-Each speaker is connected directly between the positive and negative outputs of its corresponding amplifier channel.
+Each speaker connects between the positive and negative amplifier outputs for its corresponding channel.
 
-The negative speaker outputs are amplifier outputs and are not connected directly to ground.
+The negative speaker terminals are amplifier outputs and are **not connected directly to ground**.
 
-Because the speaker outputs can carry more current than the small-signal audio connections, wider PCB traces were used for these paths.
+Wider traces were used for the speaker-output paths because these connections can carry more current than the low-level audio-input signals.
+
+---
+
+# Power System
+
+## Power Architecture
+
+Version 2 moves away from the four-AA battery system used in Version 1 and introduces a rechargeable battery architecture.
+
+The external power circuitry provides the required supply voltage for the PCB, which is then distributed to the Bluetooth receiver and amplifier circuitry.
+
+This addresses one of the major limitations of Version 1, which did not include an integrated rechargeable battery system.
 
 ---
 
 ## Power Routing
 
-Version 2 uses a rechargeable power architecture rather than the four-AA battery system used in Version 1.
+Power traces were made wider than low-current signal traces where practical.
 
-The PCB includes dedicated connections for the external power system and distributes the required supply voltage to the Bluetooth and amplifier circuitry.
+Particular attention was given to higher-current connections such as:
 
-Power traces were made wider than low-current signal traces where practical to reduce resistance and improve current handling.
+- Main power input
+- Amplifier power
+- Speaker outputs
+- Battery/power connections
 
-Particular attention was given to the battery/power and amplifier-output paths because these connections are expected to carry more current than the audio-input signals.
+Using wider copper traces reduces resistance and improves the ability of the PCB to carry current.
 
 ---
 
-## Grounding
+# Grounding
 
-Ground distribution was an important part of the PCB layout.
+Ground distribution was an important consideration during PCB layout.
 
-A copper ground region was used to provide a low-impedance common ground connection across the PCB and reduce the need for long individual ground traces.
+A copper ground region was used to provide a common low-impedance ground connection across the PCB and reduce the need for long individual ground traces.
 
 The Bluetooth receiver, amplifier circuitry, power system, and supporting passive components ultimately share the system ground.
 
-Grounding was also considered when routing the audio section because poor grounding can contribute to unwanted noise in an audio system.
+Grounding was also considered during audio routing because poor ground connections can contribute to unwanted noise in an audio system.
 
 ---
 
-## Via Usage
+# Component Placement
 
-Vias were used where necessary to transition between PCB layers and complete connections that could not be routed cleanly on a single layer.
+## Amplifier Components
 
-One routing challenge involved connecting nets around the amplifier IC while maintaining the correct electrical connections and required clearances.
+The components associated with the amplifier were grouped together near the amplifier IC.
 
-Using vias allowed traces to transition between layers and continue routing without creating unintended connections or violating the PCB design rules.
+This helps:
+
+- Reduce unnecessary trace lengths
+- Keep the amplifier section organized
+- Simplify routing
+- Keep supporting components close to their associated IC pins
 
 ---
+
+## Capacitor Placement
+
+Capacitor placement was an important consideration during PCB design.
+
+Power-related capacitors were placed close to the amplifier and associated supply connections where practical.
+
+This reduces the distance between the amplifier and its local energy-storage and decoupling components.
+
+A larger bulk capacitor is also included on the power rail to help support the amplifier during changing load conditions.
+
+---
+
+# PCB Routing
 
 ## Trace Widths
 
-Different trace widths were used depending on the expected function of each connection.
+Different trace widths were selected depending on the expected function of each connection.
 
 ### Wider Traces
 
-Wider traces were used for connections such as:
+Wider traces were used for higher-current connections such as:
 
 - Main power distribution
+- Amplifier power
 - Battery/power connections
-- Amplifier power connections
 - Left speaker output
 - Right speaker output
 
 ### Signal Traces
 
-Smaller traces were acceptable for lower-current connections such as:
+Smaller traces were used for lower-current connections such as:
 
 - Left audio input
 - Right audio input
-- Control signals
-- Other low-current connections
+- Control connections
+- Other low-current signals
 
-This approach allowed higher-current paths to use more copper while keeping the remaining PCB routing manageable.
+This allowed more copper to be dedicated to higher-current paths while keeping the remaining PCB routing manageable.
 
 ---
 
-## Component Footprints
+## Via Usage
+
+Vias were used where necessary to transition traces between the top and bottom copper layers.
+
+Several routing areas around the amplifier and other connections were difficult to complete on a single PCB layer.
+
+Using vias allowed traces to move to the opposite layer, pass around existing routing, and return to the original layer when necessary.
+
+This provided additional routing flexibility while maintaining the required electrical connections.
+
+---
+
+# Footprint Development
 
 Several component and footprint configurations required additional work during the design process.
 
 Custom components and footprints were created in EasyEDA where necessary.
 
-One issue encountered during development was EasyEDA reporting that a component lacked a footprint even though a footprint had been created.
+One issue encountered during development was EasyEDA reporting that a component lacked a footprint even though a footprint had already been created.
 
-This required verifying that the correct footprint was assigned to the corresponding schematic component rather than relying only on matching component and footprint names.
+This required verifying that the correct footprint was actually assigned to the corresponding schematic component rather than relying only on matching component and footprint names.
 
-This provided useful experience with the relationship between schematic symbols, PCB footprints, and physical components.
+This provided practical experience with the relationship between:
+
+- Schematic symbols
+- PCB footprints
+- Physical components
+- Pad assignments
+- Net assignments
 
 ---
 
-## Net and Routing Troubleshooting
+# Routing and Net Troubleshooting
 
 Several routing and net-related issues were encountered during PCB development.
 
-One issue involved nets that appeared to have matching names but were still reported as electrically disconnected.
+Some connections appeared correct visually but were still reported as electrically disconnected.
 
-Troubleshooting included checking:
+Troubleshooting involved checking:
 
 - Net assignments
 - Net names
-- Capitalization
 - Pad assignments
-- Trace connections
+- Physical trace connections
 - Layer transitions
 - Via connections
 - Copper continuity
+- Clearance requirements
 
-A via was ultimately used in one of the difficult routing areas to transition between PCB layers and create the required continuous electrical connection.
+Vias were used in difficult routing areas to transition between PCB layers and complete the required electrical connections.
 
-This demonstrated that matching net labels alone do not guarantee that a physical copper connection exists on the PCB.
+This demonstrated that matching net labels alone do not guarantee that a continuous physical copper connection exists on the PCB.
 
 ---
 
-## Design Rule Checking
+# Design Rule Checking
 
-Design Rule Checking was performed before the PCB was submitted for manufacturing.
+Design Rule Checking was performed throughout the PCB development process.
 
-The DRC process was used to identify problems including:
+DRC was used to identify potential problems including:
 
 - Unconnected nets
 - Routing conflicts
 - Clearance violations
 - Copper-region issues
-- Via-related routing problems
-- Other PCB rule violations
+- Via-related problems
+- Other PCB design-rule violations
 
 Each reported issue was investigated and corrected.
 
-The final PCB design completed DRC with no remaining reported errors before manufacturing.
+The final PCB design reached:
+
+**0 DRC Errors**
+
+before being submitted for manufacturing.
 
 ---
 
-## Silkscreen and Board Identification
+# Silkscreen and Board Identification
 
 The PCB includes custom silkscreen markings to identify the project and board revision.
 
+![JF Audio Version 2 Bottom Silkscreen](Images/PCB_3D_Bottom.png)
+
 The bottom side includes:
 
-- JF Audio branding
-- Mark II identification
-- CSUSM identification
+**CSUSM**
 
-![JF Audio V2 PCB Bottom](Images/PCB_3D_Bottom.png)
+**JF Audio**
 
-These markings distinguish the Version 2 PCB from the original prototype and provide visual identification of the project.
+**MRK II**
+
+These markings distinguish Version 2 from the original JF Audio prototype and provide identification for the custom PCB.
 
 ---
 
-## Manufacturing Preparation
+# Manufacturing Preparation
 
-Before submitting the board for fabrication, the design was reviewed for:
+Before submitting the PCB for fabrication, the design was reviewed for:
 
 - Component placement
+- Component orientation
 - Trace routing
 - Power connections
 - Speaker connections
+- Audio connections
 - Ground connectivity
 - Via placement
 - Footprint assignments
 - Silkscreen placement
-- Mounting holes
+- Mounting-hole placement
 - Design Rule Check results
 
 After the final review and successful DRC, the PCB was submitted for manufacturing.
 
----
-
-## Planned Hardware Verification
-
-Once the manufactured PCB is received, the board will be tested before full system operation.
-
-Initial verification will include:
-
-1. Visual inspection of the PCB
-2. Inspection for manufacturing defects
-3. Continuity testing of important nets
-4. Checking for shorts between power and ground
-5. Verification of amplifier connections
-6. Verification of Bluetooth-module connections
-7. Verification of speaker-output connections
-8. Initial power testing
-9. Audio testing
-10. Rechargeable power-system testing
-
-Results from these tests will be documented after assembly.
+The fabrication files are being kept separately from the public project documentation.
 
 ---
 
-## Improvements Over Version 1
+# Planned Hardware Verification
 
-The Version 2 PCB addresses several limitations discovered during the original prototype.
+Once the manufactured PCB is received, the board will be inspected and electrically tested before full operation.
+
+The planned verification process includes:
+
+1. Visually inspect the PCB for manufacturing defects.
+2. Verify important connections using continuity testing.
+3. Check for shorts between the power rail and ground.
+4. Verify battery and power connections.
+5. Verify the regulated power supply before connecting the complete system.
+6. Verify amplifier power connections.
+7. Verify Bluetooth-module connections.
+8. Verify left and right speaker connections.
+9. Perform initial power-up testing.
+10. Test Bluetooth connectivity.
+11. Test the left audio channel.
+12. Test the right audio channel.
+13. Check for unwanted audio noise or distortion.
+14. Test the rechargeable power system.
+15. Install and test the PCB inside the final enclosure.
+
+Test results will be documented after assembly.
+
+---
+
+# Improvements Over Version 1
 
 | Version 1 | Version 2 |
 |---|---|
-| Breadboard | Custom PCB |
-| PAM8403 amplifier module | Amplifier IC integrated onto PCB |
-| Jumper-wire connections | PCB traces |
-| Large wiring footprint | More compact routing |
-| AA battery system | Rechargeable power system |
-| No integrated charging | Rechargeable power architecture |
-| Modified food container | Dedicated enclosure |
-| Prototype construction | More permanent assembly |
+| Breadboard-based construction | Custom PCB |
+| PAM8403 amplifier module | Amplifier circuitry integrated onto PCB |
+| Large number of jumper wires | PCB trace routing |
+| Four AA batteries | Rechargeable battery system |
+| No integrated battery charging | Rechargeable power architecture |
+| Modified food container | Dedicated plastic enclosure |
+| Large internal wiring footprint | More compact electrical system |
+| Prototype-oriented construction | More permanent hardware design |
+
+The custom PCB represents one of the largest improvements between the two versions because it replaces much of the point-to-point wiring used in the original prototype.
 
 ---
 
-## Current Status
+# Current Status
 
 - [x] PCB schematic/design completed
 - [x] Component footprints configured
@@ -317,19 +421,22 @@ The Version 2 PCB addresses several limitations discovered during the original p
 - [x] PCB submitted for manufacturing
 - [x] Components ordered
 - [ ] Manufactured PCB received
+- [ ] PCB visually inspected
 - [ ] PCB continuity tested
 - [ ] Components assembled
 - [ ] Initial power-up completed
-- [ ] Audio functionality tested
+- [ ] Bluetooth functionality tested
+- [ ] Left audio channel tested
+- [ ] Right audio channel tested
 - [ ] Rechargeable power system tested
 - [ ] Final enclosure assembly completed
 
 ---
 
-## Summary
+# Summary
 
-The JF Audio Version 2 PCB represents the transition from a breadboard-based proof of concept to a purpose-built hardware design.
+The JF Audio Version 2 PCB represents the transition from the breadboard-based proof of concept developed in Version 1 to a purpose-built hardware design.
 
-The design process provided practical experience with component placement, PCB routing, trace sizing, grounding, vias, footprint management, design-rule checking, and preparing a custom PCB for manufacturing.
+The PCB design process provided practical experience with schematic development, custom footprints, component placement, trace routing, trace sizing, grounding, copper regions, vias, design-rule checking, and preparing a custom PCB for manufacturing.
 
-The next stage of the project will focus on validating the manufactured PCB, assembling the components, testing the electrical system, and integrating the completed hardware into the Version 2 enclosure.
+The next stage of the project will focus on inspecting the manufactured PCB, assembling the hardware, performing electrical measurements, testing the audio system, troubleshooting any issues, and integrating the completed electronics into the Version 2 enclosure.
