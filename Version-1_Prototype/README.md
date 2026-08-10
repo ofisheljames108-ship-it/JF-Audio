@@ -217,11 +217,10 @@ Future improvements are currently being explored. Potential areas of development
 
 ## Project Files
 
-- `Photos/` - Photographs of the completed prototype and internal construction
-- `Parts/` - Version 1 component and material list
-- `Schematics/` - LTspice schematic and schematic image
-- `Schematics/Symbols/` - Custom LTspice symbols created for the project
-
+- [Photos/](Photos/) - Photographs of the completed prototype and internal construction
+- [Parts/](Parts/) - Version 1 component and material list
+- [Schematics/](Schematics/) - LTspice schematic and schematic image
+- [Schematics/Symbols/](Schematics/Symbols/) - Custom LTspice symbols created for the project
 ---
 
 ## Status
