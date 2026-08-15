@@ -203,6 +203,8 @@ This helps:
 - Simplify routing
 - Keep supporting components close to their associated IC pins
 
+The manufactured PCB demonstrated that electrical compactness also needs to be balanced against physical accessibility during assembly and rework. This became an important consideration for future revisions.
+
 ---
 
 ## Capacitor Placement
@@ -213,7 +215,9 @@ Power-related capacitors were placed close to the amplifier and associated suppl
 
 This reduces the distance between the amplifier and its local energy-storage and decoupling components.
 
-A larger bulk capacitor is also included on the power rail to help support the amplifier during changing load conditions.
+A larger 470 µF bulk capacitor is also used on the regulated power rail to help support the amplifier during changing load conditions.
+
+During physical assembly, an issue was discovered with the PCB footprint originally assigned to this capacitor. This issue and its solution are documented later in the PCB Bring-Up section.
 
 ---
 
@@ -276,6 +280,8 @@ This provided practical experience with the relationship between:
 - Pad assignments
 - Net assignments
 
+The physical assembly process also demonstrated the importance of verifying the actual package dimensions of components before manufacturing. An electrically correct component value does not guarantee that the selected PCB footprint will physically accommodate the intended component.
+
 ---
 
 # Routing and Net Troubleshooting
@@ -322,6 +328,8 @@ The final PCB design reached:
 
 before being submitted for manufacturing.
 
+The physical assembly process later demonstrated that passing DRC confirms compliance with the configured electrical and manufacturing rules, but does not replace a detailed review of component dimensions, assembly accessibility, and rework clearance.
+
 ---
 
 # Silkscreen and Board Identification
@@ -365,29 +373,82 @@ The fabrication files are being kept separately from the public project document
 
 ---
 
-# Planned Hardware Verification
+# PCB Bring-Up & Assembly Notes
 
-Once the manufactured PCB is received, the board will be inspected and electrically tested before full operation.
+After receiving the manufactured PCB, the board was visually inspected and tested for continuity before power was applied.
 
-The planned verification process includes:
+Continuity testing confirmed the expected power, ground, and signal connections across the PCB and did not identify unintended shorts between the main supply and ground rails.
 
-1. Visually inspect the PCB for manufacturing defects.
-2. Verify important connections using continuity testing.
-3. Check for shorts between the power rail and ground.
-4. Verify battery and power connections.
-5. Verify the regulated power supply before connecting the complete system.
-6. Verify amplifier power connections.
-7. Verify Bluetooth-module connections.
-8. Verify left and right speaker connections.
-9. Perform initial power-up testing.
-10. Test Bluetooth connectivity.
-11. Test the left audio channel.
-12. Test the right audio channel.
-13. Check for unwanted audio noise or distortion.
-14. Test the rechargeable power system.
-15. Install and test the PCB inside the final enclosure.
+## C10 Bulk Capacitor Footprint Issue
 
-Test results will be documented after assembly.
+During physical assembly, it was discovered that the footprint selected for C10 was too small for the intended 470 µF electrolytic bulk capacitor.
+
+Because the manufactured PCB could not physically accommodate the required capacitor at the original C10 location, the capacitor was instead connected externally across the regulated 5 V and GND supply rails feeding the PCB.
+
+This allowed the existing PCB revision to remain usable while identifying a footprint correction for a future board revision.
+
+The issue demonstrated the importance of verifying both the electrical value and the physical package dimensions of a component before PCB fabrication.
+
+## Assembly and Rework Challenges
+
+The compact PCB successfully reduced the amount of enclosure space and point-to-point wiring required compared with Version 1.
+
+However, the dense placement around the PAM8403 audio amplifier and its supporting surface-mount components made hand soldering and rework more difficult.
+
+During rework near the amplifier section, the limited clearance between components made it possible for heat from the soldering iron or excess solder to affect neighboring small capacitors.
+
+This demonstrated that minimizing PCB size must be balanced against:
+
+- Electrical performance
+- Manufacturability
+- Hand assembly
+- Soldering accessibility
+- Testing
+- Troubleshooting
+- Repairability
+
+Although increasing the overall PCB dimensions could provide additional working space, future revisions can also improve assembly by changing component placement rather than simply increasing the entire board size.
+
+---
+
+## Improvements for the Next PCB Revision
+
+Future PCB revisions should include:
+
+- Correct C10 footprint for the 470 µF polarized electrolytic capacitor
+- Increased working clearance around the PAM8403
+- Increased clearance between small passive components where practical
+- Larger or dedicated 5 V and GND solder pads
+- Dedicated test points for important power and signal connections
+- Improved access to solder joints used for external wiring
+- Placement of off-board wire connections near PCB edges where practical
+- Improved silkscreen spacing and reference-designator placement
+- Consideration of larger passive-component packages where practical for easier hand soldering and rework
+- Continued use of short amplifier power and decoupling paths while improving physical accessibility
+- Additional consideration of assembly and serviceability during component placement
+
+The goal for the next PCB revision is therefore not simply to make the board larger, but to improve component placement and serviceability while retaining the compact integration achieved in Version 2.
+
+---
+
+## Hardware Verification Progress
+
+The manufactured boards have been visually inspected and continuity-tested.
+
+Initial checks verified the important PCB connections and confirmed that no obvious unintended power-to-ground shorts were present.
+
+The remaining verification process includes:
+
+1. Complete initial powered measurements of the regulated supply.
+2. Verify amplifier operation.
+3. Verify Bluetooth-module operation and connectivity.
+4. Test the left audio channel.
+5. Test the right audio channel.
+6. Check for unwanted audio noise or distortion.
+7. Test the rechargeable power and charging system.
+8. Install and test the completed electronics inside the final enclosure.
+
+Additional results will be documented as assembly and testing continue.
 
 ---
 
@@ -420,10 +481,10 @@ The custom PCB represents one of the largest improvements between the two versio
 - [x] DRC errors resolved
 - [x] PCB submitted for manufacturing
 - [x] Components ordered
-- [ ] Manufactured PCB received
-- [ ] PCB visually inspected
-- [ ] PCB continuity tested
-- [ ] Components assembled
+- [x] Manufactured PCB received
+- [x] PCB visually inspected
+- [x] PCB continuity tested
+- [ ] Components assembled (in progress)
 - [ ] Initial power-up completed
 - [ ] Bluetooth functionality tested
 - [ ] Left audio channel tested
@@ -439,4 +500,10 @@ The JF Audio Version 2 PCB represents the transition from the breadboard-based p
 
 The PCB design process provided practical experience with schematic development, custom footprints, component placement, trace routing, trace sizing, grounding, copper regions, vias, design-rule checking, and preparing a custom PCB for manufacturing.
 
-The next stage of the project will focus on inspecting the manufactured PCB, assembling the hardware, performing electrical measurements, testing the audio system, troubleshooting any issues, and integrating the completed electronics into the Version 2 enclosure.
+Physical assembly of the manufactured PCB also provided experience with PCB bring-up, continuity testing, component-footprint verification, soldering, rework, and troubleshooting.
+
+The first manufactured revision demonstrated that a compact PCB can successfully reduce wiring and enclosure space, but also showed the importance of considering physical assembly and repairability during component placement.
+
+With the manufactured PCB received and initial continuity verification completed, the current stage of the project focuses on hardware assembly, powered electrical measurements, audio-system testing, troubleshooting, and final integration into the Version 2 enclosure.
+
+Lessons from Version 2 will also be used to guide a future PCB revision with improved component spacing, soldering accessibility, test points, and serviceability.
