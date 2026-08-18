@@ -299,7 +299,7 @@ The transition from Version 1 to Version 2 represents the progression from a fun
 - [PCB Photos](PCB/Photos/) - 2D/3D PCB renders and photographs of the manufactured board
 - [Parts List](Parts/Parts_List.md) - Version 2 bill of materials and component information
 - [Schematics](Schematics/) - Electrical schematics and supporting design files
-- [Hardware Testing](Testing/) - Bench testing, measurements, troubleshooting, and hardware verification
+- [Hardware Testing](Testing/Hardware_Testing.md) - Bench testing, measurements, troubleshooting, and hardware verification
 
 ---
 
