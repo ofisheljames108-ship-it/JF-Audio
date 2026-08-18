@@ -46,10 +46,15 @@ Key accomplishments:
 
 ---
 
-### Version 2 — Custom PCB
+## Version 2 — Custom PCB
 
-Version 2 replaces the breadboard-based audio circuitry with a custom PCB
-designed in EasyEDA.
+Version 2 replaces the breadboard-based audio circuitry with a custom PCB designed in EasyEDA. The board integrates the PAM8403 stereo audio amplifier, passive components, Bluetooth connections, speaker outputs, and power connections.
+
+<p align="center">
+  <img src="Version-2_Custom-PCB/PCB/Photos/PCB_Manufactured_Top.jpeg" width="600">
+</p>
+
+The PCB was designed, fabricated, assembled, and tested as part of the development process. Hardware testing is currently ongoing, including power-system integration and troubleshooting.
 
 The design integrates a PAM8403 stereo amplifier IC with the Bluetooth audio
 receiver and introduces a rechargeable lithium-ion power architecture.
