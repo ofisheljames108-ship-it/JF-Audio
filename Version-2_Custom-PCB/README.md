@@ -88,14 +88,26 @@ The final PCB passed the configured design-rule checks before being submitted fo
 
 ## PCB Layout
 
-PCB layout images will be added here to document the completed board design.
+## PCB Layout
 
-<!-- Add PCB layout image here -->
+The custom PCB was designed in EasyEDA to integrate the PAM8403 stereo
+audio amplifier, Bluetooth connections, power connections, and speaker outputs.
 
-The PCB was designed with increased trace widths for higher-current connections such as the battery, power, and speaker paths.
+### PCB Design
 
-A ground copper region was also used to provide a common ground connection and reduce the amount of individual ground routing required on the board.
+<p align="center">
+  <img src="PCB/Photos/PCB_3D_Top.png" width="500">
+</p>
 
+### Manufactured PCB
+
+<p align="center">
+  <img src="PCB/Photos/PCB_Manufactured_Top.jpeg" width="500">
+</p>
+
+The PCB uses wider traces for higher-current paths such as power and
+speaker connections. Copper ground regions were incorporated to simplify
+ground routing and provide a common ground reference.
 ---
 
 ## Power System
