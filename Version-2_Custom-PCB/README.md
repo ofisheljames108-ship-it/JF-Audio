@@ -88,8 +88,6 @@ The final PCB passed the configured design-rule checks before being submitted fo
 
 ## PCB Layout
 
-## PCB Layout
-
 The custom PCB was designed in EasyEDA to integrate the PAM8403 stereo
 audio amplifier, Bluetooth connections, power connections, and speaker outputs.
 
@@ -108,6 +106,7 @@ audio amplifier, Bluetooth connections, power connections, and speaker outputs.
 The PCB uses wider traces for higher-current paths such as power and
 speaker connections. Copper ground regions were incorporated to simplify
 ground routing and provide a common ground reference.
+
 ---
 
 ## Power System
@@ -216,6 +215,7 @@ Assembly included:
 
 The assembled PCB successfully produced stereo audio during initial bench
 testing.
+
 ---
 
 ## Hardware Testing
@@ -250,7 +250,9 @@ system under the abnormal condition.
 
 Troubleshooting and test measurements are documented in
 [Hardware_Testing.md](Testing/Hardware_Testing.md).
+
 ---
+
 ## Engineering Challenges
 
 Version 2 introduced several practical challenges that were not present
