@@ -433,22 +433,46 @@ The goal for the next PCB revision is therefore not simply to make the board lar
 
 ## Hardware Verification Progress
 
-The manufactured boards have been visually inspected and continuity-tested.
+Initial powered testing of the manufactured Version 2 PCB has now been
+completed.
 
-Initial checks verified the important PCB connections and confirmed that no obvious unintended power-to-ground shorts were present.
+Testing successfully verified:
 
-The remaining verification process includes:
+- Approximately 5.1 V supply to the PCB during initial power testing
+- Bluetooth receiver power and connectivity
+- Successful Bluetooth pairing
+- PAM8403 left audio channel operation
+- PAM8403 right audio channel operation
+- Successful stereo speaker output
 
-1. Complete initial powered measurements of the regulated supply.
-2. Verify amplifier operation.
-3. Verify Bluetooth-module operation and connectivity.
-4. Test the left audio channel.
-5. Test the right audio channel.
+These results confirmed successful operation of the primary Version 2
+Bluetooth audio signal path:
+
+Bluetooth Receiver → JF Audio PCB → PAM8403 Amplifier → Left/Right Speakers
+
+During subsequent power-system testing, an issue developed with the
+PowerBoost 1000C. The module stopped producing the expected boosted output
+and exhibited abnormal heating near the boost-converter IC. Further testing
+of that module was discontinued, and a replacement PowerBoost will be used
+for continued system testing.
+
+The exact cause of the PowerBoost failure has not been conclusively
+determined.
+
+Detailed electrical measurements, test results, and troubleshooting are
+documented separately in:
+
+[Hardware Testing](../Testing/Hardware_Testing.md)
+
+Remaining verification includes:
+
+1. Install and verify the 1S lithium-ion battery protection module.
+2. Install and test the replacement PowerBoost 1000C.
+3. Verify the complete rechargeable power and charging system.
+4. Verify external power-switch operation.
+5. Perform extended stereo playback testing.
 6. Check for unwanted audio noise or distortion.
-7. Test the rechargeable power and charging system.
-8. Install and test the completed electronics inside the final enclosure.
-
-Additional results will be documented as assembly and testing continue.
+7. Install and test the completed electronics inside the final enclosure.
 
 ---
 
@@ -484,14 +508,17 @@ The custom PCB represents one of the largest improvements between the two versio
 - [x] Manufactured PCB received
 - [x] PCB visually inspected
 - [x] PCB continuity tested
-- [ ] Components assembled (in progress)
-- [ ] Initial power-up completed
-- [ ] Bluetooth functionality tested
-- [ ] Left audio channel tested
-- [ ] Right audio channel tested
-- [ ] Rechargeable power system tested
+- [x] Initial power-up completed
+- [x] Bluetooth functionality tested
+- [x] Left audio channel tested
+- [x] Right audio channel tested
+- [x] Stereo audio operation verified
+- [ ] 1S battery protection module installed
+- [ ] Replacement PowerBoost installed and tested
+- [ ] Rechargeable power system fully tested
+- [ ] Power switch tested
+- [ ] Extended audio testing completed
 - [ ] Final enclosure assembly completed
-
 ---
 
 # Summary
