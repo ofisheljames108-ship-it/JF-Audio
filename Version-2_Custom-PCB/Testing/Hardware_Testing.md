@@ -23,7 +23,7 @@ Testing is still in progress as the Version 2 hardware is assembled and refined.
 
 ## Initial Bench Setup
 
-![Initial JF Audio V2 Bench Test](Initial_Bench_Test.jpeg)
+![Initial JF Audio V2 Bench Test](Photos/Initial_Bench_Test.jpeg)
 
 The Version 2 electronics were tested outside of the final enclosure to allow
 individual subsystems to be measured and verified before permanent installation.
@@ -160,11 +160,11 @@ This represented the first successful stereo audio operation of the manufactured
 
 ### Top Side
 
-![PowerBoost Top-Side Wiring](PowerBoost_Wiring_Top.jpeg)
+![PowerBoost Top-Side Wiring](Photos/PowerBoost_Wiring_Top.jpeg)
 
 ### Bottom Side
 
-![PowerBoost Bottom-Side Wiring](PowerBoost_Wiring_Bottom.jpeg)
+![PowerBoost Bottom-Side Wiring](Photos/PowerBoost_Wiring_Bottom.jpeg)
 
 The PowerBoost 1000C was integrated into the Version 2 power system to provide
 the regulated supply required by the custom PCB.
@@ -177,7 +177,7 @@ power input, and external 470 µF bulk capacitor.
 
 # PowerBoost Troubleshooting
 
-![PowerBoost Troubleshooting](PowerBoost_Troubleshooting.jpeg)
+![PowerBoost Troubleshooting](Photos/PowerBoost_Troubleshooting.jpeg)
 
 During later testing of the external power-enable circuit, the PowerBoost
 stopped producing the expected boosted output.
