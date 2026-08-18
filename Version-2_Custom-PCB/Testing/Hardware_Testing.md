@@ -20,13 +20,16 @@ Testing is still in progress as the Version 2 hardware is assembled and refined.
 
 ---
 
-# Initial Bench Setup
 
-![Initial JF Audio V2 Bench Setup](photos/Initial_Bench_Setup.jpg)
+## Initial Bench Setup
 
-The Version 2 electronics were initially tested outside of the final enclosure. This allowed individual subsystems to be measured and verified before permanent installation.
+![Initial JF Audio V2 Bench Test](Initial_Bench_Test.jpeg)
 
-Testing the system on the bench also provided easier access to power connections, PCB test points, audio connections, and individual components during troubleshooting.
+The Version 2 electronics were tested outside of the final enclosure to allow
+individual subsystems to be measured and verified before permanent installation.
+
+This bench configuration included the custom JF Audio PCB, Bluetooth receiver,
+PAM8403 amplifier, PowerBoost 1000C, 18650 battery system, and both speakers.
 
 ---
 
@@ -152,25 +155,47 @@ This represented the first successful stereo audio operation of the manufactured
 
 ---
 
+
 # PowerBoost Wiring
 
-![PowerBoost Wiring](photos/PowerBoost_Wiring.jpg)
+### Top Side
 
-The PowerBoost 1000C was integrated into the Version 2 power system to provide the regulated supply required by the custom PCB.
+![PowerBoost Top-Side Wiring](PowerBoost_Wiring_Top.jpeg)
 
-Initial testing confirmed approximately 5.1 V at the PowerBoost output, PCB power input, and external 470 µF bulk capacitor.
+### Bottom Side
 
-The PowerBoost enable input was initially left disconnected during early testing so that the basic power and audio systems could be verified before adding external power-switch control.
+![PowerBoost Bottom-Side Wiring](PowerBoost_Wiring_Bottom.jpeg)
+
+The PowerBoost 1000C was integrated into the Version 2 power system to provide
+the regulated supply required by the custom PCB.
+
+Initial testing measured approximately 5.1 V at the PowerBoost output, PCB
+power input, and external 470 µF bulk capacitor.
 
 ---
 
+
 # PowerBoost Troubleshooting
 
-![PowerBoost Troubleshooting](photos/PowerBoost_Troubleshooting.jpg)
+![PowerBoost Troubleshooting](PowerBoost_Troubleshooting.jpeg)
 
-During later testing of the external power-enable switch, the PowerBoost stopped producing the expected boosted output.
+During later testing of the external power-enable circuit, the PowerBoost
+stopped producing the expected boosted output.
 
-The module was isolated from the remaining system for troubleshooting.
+Troubleshooting measurements included:
+
+- Battery input: approximately 3.8 V
+- Boosted output: approximately 0 V
+- LOW indicator remained illuminated
+- Abnormal heating was observed near the boost-converter IC
+- No obvious 0-ohm short was measured across the primary power rails
+
+Because abnormal heating was observed, additional battery-powered testing of
+the module was discontinued.
+
+The exact cause of the failure has not been conclusively determined. A
+replacement PowerBoost 1000C will be installed before additional system-level
+testing is performed.
 
 ## Observed Behavior
 
