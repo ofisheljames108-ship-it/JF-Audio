@@ -295,10 +295,11 @@ The transition from Version 1 to Version 2 represents the progression from a fun
 
 ## Project Files
 
-- [Photos/](Photos/) - Version 2 construction and assembly photographs
-- [Parts/](Parts/) - Version 2 bill of materials and component information
-- [PCB/](PCB/) - PCB design files, manufacturing files, and board images
-- [Schematics/](Schematics/) - Electrical schematics and supporting design files
+- [PCB Design Documentation](PCB/PCB_Design_Notes.md) - PCB design process, layout decisions, manufacturing results, and design notes
+- [PCB Photos](PCB/Photos/) - 2D/3D PCB renders and photographs of the manufactured board
+- [Parts List](Parts/Parts_List.md) - Version 2 bill of materials and component information
+- [Schematics](Schematics/) - Electrical schematics and supporting design files
+- [Hardware Testing](Testing/) - Bench testing, measurements, troubleshooting, and hardware verification
 
 ---
 
