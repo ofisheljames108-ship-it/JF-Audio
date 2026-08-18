@@ -270,7 +270,9 @@ These included:
 These challenges provided experience in hardware debugging, PCB assembly,
 electrical measurement, and iterative design beyond the initial schematic
 and PCB-layout stages.
+
 ---
+
 ## Lessons From Version 1 Applied to Version 2
 
 Version 1 demonstrated that the Bluetooth speaker architecture worked, but also identified several areas requiring improvement.
