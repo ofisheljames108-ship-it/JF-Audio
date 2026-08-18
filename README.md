@@ -2,6 +2,11 @@
 
 A multi-generation Bluetooth speaker engineering project documenting the complete design process from prototype to custom PCB and beyond.
 
+<p align="center">
+  <img src="Version-1_Prototype/photos/v1_finished_speaker.jpg" width="600">
+</p>
+
+This project follows the development of a portable Bluetooth speaker through multiple design iterations, beginning with a breadboard prototype and progressing toward a custom PCB-based system.
 ## Project Overview
 
 JF-Audio is a personal electrical engineering project focused on designing and
