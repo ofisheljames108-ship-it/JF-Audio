@@ -148,7 +148,10 @@ The new enclosure is intended to provide:
 - Improved portability
 - More permanent mounting of switches, speakers, and electrical hardware
 
-The PCB and other internal components will be installed after the manufactured board and remaining components are received and tested.
+The enclosure layout is currently being developed around the manufactured
+PCB, PowerBoost module, rechargeable battery system, speakers, and external
+power switch. Final mounting will be completed after power-system testing
+and full electrical validation are complete.
 
 ---
 
@@ -192,44 +195,82 @@ Resolving these issues was an important part of preparing the board for manufact
 
 ---
 
-## Manufacturing
+## Manufacturing and Assembly
 
-The Version 2 PCB has been submitted for manufacturing.
+The Version 2 PCB was successfully manufactured and received for assembly.
 
-Once the board is received, the next stages will include:
+After receiving the board, the PCB was visually inspected and continuity
+tests were performed before power was applied. Components were then
+installed and the board was integrated with the Bluetooth module,
+PowerBoost 1000C, battery system, and speakers.
 
-1. Visual inspection of the manufactured PCB
-2. Continuity testing
-3. Verification of power and ground connections
-4. Component installation
-5. Initial power testing
-6. Bluetooth and audio testing
-7. Speaker testing
-8. Battery and charging testing
-9. Installation into the enclosure
-10. Final system testing
+Assembly included:
 
+- PAM8403 stereo amplifier IC
+- Passive amplifier components
+- Bluetooth module connections
+- Left and right speaker connections
+- Power and ground wiring
+- PowerBoost 1000C integration
+- External power-control wiring
+
+The assembled PCB successfully produced stereo audio during initial bench
+testing.
 ---
 
-## Testing
+## Hardware Testing
 
-Testing results will be documented after the Version 2 PCB and components are assembled.
+Initial bench testing was performed incrementally to verify each subsystem
+before final enclosure installation.
 
-Planned testing includes:
+Testing completed so far includes:
 
-- PCB continuity testing
-- Power-rail voltage measurements
-- Ground continuity
-- Bluetooth pairing
-- Left/right audio-channel verification
-- Speaker output testing
-- Battery operation
-- Charging operation
-- Power-switch operation
-- Extended playback testing
+- [x] PCB continuity inspection
+- [x] Power and ground continuity checks
+- [x] Initial ~5.1 V supply verification
+- [x] Bluetooth module power-up
+- [x] Bluetooth pairing
+- [x] Left-channel audio verification
+- [x] Right-channel audio verification
+- [x] Stereo speaker operation
+- [ ] Replacement PowerBoost verification
+- [ ] Battery protection integration
+- [ ] Power-switch verification
+- [ ] Charging-system verification
+- [ ] Extended playback testing
+- [ ] Final enclosure testing
 
+The Bluetooth and audio portions of the system successfully operated during
+bench testing, including simultaneous operation of both speaker channels.
+
+During later power-system testing, abnormal heating was observed in the
+PowerBoost 1000C boost-converter circuitry. Testing was stopped and the
+module was removed from service rather than continuing to operate the
+system under the abnormal condition.
+
+Troubleshooting and test measurements are documented in
+[Hardware_Testing.md](Testing/Hardware_Testing.md).
 ---
+## Engineering Challenges
 
+Version 2 introduced several practical challenges that were not present
+during the breadboard prototype.
+
+These included:
+
+- Designing and verifying custom component footprints
+- Routing power, audio, and speaker connections on a compact PCB
+- Correcting schematic and PCB net inconsistencies
+- Hand-soldering small surface-mount components
+- Integrating separate power-management and audio subsystems
+- Troubleshooting power-control behavior
+- Diagnosing abnormal PowerBoost operation during bench testing
+- Balancing PCB size with accessibility for soldering and wiring
+
+These challenges provided experience in hardware debugging, PCB assembly,
+electrical measurement, and iterative design beyond the initial schematic
+and PCB-layout stages.
+---
 ## Lessons From Version 1 Applied to Version 2
 
 Version 1 demonstrated that the Bluetooth speaker architecture worked, but also identified several areas requiring improvement.
@@ -259,30 +300,49 @@ The transition from Version 1 to Version 2 represents the progression from a fun
 
 ## Current Status
 
-**In Development**
+**In Development — Hardware Integration and Testing**
 
 - [x] Version 1 prototype completed
 - [x] Version 2 architecture developed
 - [x] Custom PCB designed
 - [x] PCB routing completed
 - [x] Design Rule Check completed
-- [x] PCB submitted for manufacturing
-- [x] Components ordered
-- [ ] PCB received
-- [ ] PCB inspected and electrically tested
-- [ ] Components assembled
-- [ ] Initial power-up completed
-- [ ] Bluetooth audio tested
-- [ ] Rechargeable power system tested
+- [x] PCB manufactured and received
+- [x] PCB visually inspected
+- [x] Components assembled
+- [x] PCB continuity tested
+- [x] Initial power testing performed
+- [x] Bluetooth module powered and paired
+- [x] Left audio channel tested
+- [x] Right audio channel tested
+- [x] Stereo audio operation verified
+- [x] PowerBoost fault identified during testing
+- [ ] Replacement PowerBoost tested
+- [ ] Battery protection system integrated
+- [ ] Power switch validated
+- [ ] Charging operation validated
 - [ ] Enclosure assembled
-- [ ] Final Version 2 testing completed
-
+- [ ] Extended playback testing
+- [ ] Final Version 2 validation
 ---
 
 ## Next Steps
 
-The next stage of Version 2 will begin when the manufactured PCB and remaining components arrive.
+The next stage of Version 2 focuses on completing power-system validation
+and final hardware integration.
 
-The board will first be inspected and electrically tested before components are installed. After assembly, the power system will be tested before connecting the Bluetooth and audio sections.
+Planned work includes:
 
-Successful completion of Version 2 will provide the foundation for **JF Audio Version 3**, which will explore additional improvements in audio performance, hardware integration, enclosure design, power management, and user features.
+1. Install and independently test the replacement PowerBoost 1000C
+2. Verify stable 5 V output before connecting the remaining electronics
+3. Integrate the battery protection system
+4. Reconnect and test the custom PCB
+5. Verify Bluetooth and stereo audio operation
+6. Validate external power-switch operation
+7. Test battery charging
+8. Install hardware into the enclosure
+9. Perform extended playback and final system testing
+10. Document final measurements and completed assembly
+
+Results from these tests will be added to the hardware-testing documentation
+as development continues.
