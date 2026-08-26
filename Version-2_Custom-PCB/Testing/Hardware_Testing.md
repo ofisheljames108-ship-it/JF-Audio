@@ -197,6 +197,116 @@ The exact cause of the failure has not been conclusively determined. A
 replacement PowerBoost 1000C will be installed before additional system-level
 testing is performed.
 
+## Integrated System Test
+
+After individual subsystem testing, the Version 2 electronics were connected as a complete system.
+
+The integrated system included:
+
+- Custom JF Audio PCB
+- PAM8403 stereo audio amplifier
+- Bluetooth audio receiver
+- Adafruit PowerBoost 1000C
+- 18650 lithium-ion battery
+- 1S battery protection PCB
+- External power switch
+- Left and right speakers
+
+The battery was connected through the protection PCB before supplying the PowerBoost. The protected battery output was then used to power the PowerBoost, which supplied the 5 V electronics rail.
+
+The complete system successfully powered on using the external switch. The Bluetooth receiver entered pairing mode, successfully paired with an audio source, and stereo audio playback was confirmed through both speakers.
+
+### Result
+
+**PASS**
+
+The Version 2 electrical system operated successfully as a complete battery-powered Bluetooth speaker.
+
+## Initial Playback Test
+
+Following successful system integration, the speaker was operated continuously for approximately 15 minutes.
+
+During the test:
+
+- Bluetooth pairing remained stable
+- Music playback remained continuous
+- Both speakers operated correctly
+- The external power switch operated correctly
+- No unexpected shutdowns occurred
+
+The speaker was manually turned off using the external power switch after approximately 15 minutes.
+
+### Result
+
+**PASS**
+
+## Extended Playback Test
+
+An extended battery-powered playback test was performed to evaluate system stability and thermal behavior.
+
+The speaker operated continuously for approximately 1 hour while playing music.
+
+During the test:
+
+- Bluetooth connection remained stable
+- Both audio channels continued operating
+- No unexpected resets or shutdowns occurred
+- No components exhibited abnormal overheating
+- The power system remained stable
+
+At the end of the test, the battery voltage measured approximately **3.77 V**.
+
+### Result
+
+**PASS**
+
+The system demonstrated stable operation during one hour of continuous battery-powered audio playback.
+
+## Battery Charging Test
+
+Charging operation was tested using the Adafruit PowerBoost 1000C charging system.
+
+Before charging, the battery had previously measured approximately **3.77 V** following the extended playback test.
+
+During an early charging measurement:
+
+- Battery voltage disconnected from the charger: approximately **3.92 V**
+- Battery voltage while connected to the charger: approximately **3.97 V**
+
+Charging was continued toward full charge.
+
+Near the end of the charging cycle, the battery voltage stabilized at approximately **4.17 V** for an extended period while the PowerBoost charging indicator remained active.
+
+The PowerBoost later indicated completion of the charging cycle, and the battery measured approximately **4.18 V**.
+
+The battery protection PCB and battery did not exhibit abnormal heating during charging.
+
+The PowerBoost charging circuitry became warm during portions of the charging process, with temperature decreasing as the battery approached full charge.
+
+### Result
+
+**PASS**
+
+The rechargeable power system successfully charged the battery from a partially discharged state to approximately 4.18 V.
+
+## Simultaneous Charging and Playback Test
+
+The speaker was tested while connected to external charging power to verify that audio playback could continue during battery charging.
+
+During the test:
+
+- The speaker remained powered
+- Bluetooth remained connected
+- Music playback continued successfully
+- Both speakers operated normally
+- The charging system remained functional
+
+### Result
+
+**PASS**
+
+The Version 2 system successfully supported audio playback while connected to charging power.
+
 ## Observed Behavior
 
 The following observations were recorded:
