@@ -136,21 +136,19 @@ The custom PCB provides the electrical connections between the Bluetooth receive
 
 ## Enclosure
 
-Version 2 replaces the modified food container used in Version 1 with a dedicated plastic electronics enclosure.
+Version 2 uses a dedicated plastic electronics enclosure rather than the modified food container used in Version 1.
 
-The new enclosure is intended to provide:
+Following successful electrical testing, mechanical integration of the system began.
 
-- Improved component mounting
-- Better protection for the electronics
-- Cleaner external appearance
-- More organized internal construction
-- Improved portability
-- More permanent mounting of switches, speakers, and electrical hardware
+The enclosure has an approximate internal usable area of **143 mm × 72 mm**.
 
-The enclosure layout is currently being developed around the manufactured
-PCB, PowerBoost module, rechargeable battery system, speakers, and external
-power switch. Final mounting will be completed after power-system testing
-and full electrical validation are complete.
+The two speakers are being positioned side-by-side on the enclosure lid. Each speaker has an approximately **65 mm circular acoustic opening**.
+
+Paper templates were created before cutting the enclosure to verify speaker spacing, mounting-hole clearance, enclosure-edge clearance, and interference with the enclosure screw posts.
+
+The internal electronics will be positioned after the speaker mounting geometry is finalized.
+
+Mechanical integration is currently in progress.
 
 ---
 
@@ -194,62 +192,60 @@ Resolving these issues was an important part of preparing the board for manufact
 
 ---
 
-## Manufacturing and Assembly
+## PCB Manufacturing and Assembly
 
-The Version 2 PCB was successfully manufactured and received for assembly.
+The custom Version 2 PCB was successfully manufactured and received.
 
-After receiving the board, the PCB was visually inspected and continuity
-tests were performed before power was applied. Components were then
-installed and the board was integrated with the Bluetooth module,
-PowerBoost 1000C, battery system, and speakers.
+Following manufacturing, the board underwent visual inspection and electrical testing before full system integration.
 
-Assembly included:
+The assembly and bring-up process included:
 
-- PAM8403 stereo amplifier IC
-- Passive amplifier components
-- Bluetooth module connections
-- Left and right speaker connections
-- Power and ground wiring
-- PowerBoost 1000C integration
-- External power-control wiring
+1. Visual inspection of the manufactured PCB
+2. Continuity testing
+3. Verification of power and ground connections
+4. Hand-soldering of surface-mount components
+5. Initial PCB power testing
+6. Integration of the PowerBoost 1000C
+7. Integration of the battery protection circuit
+8. Bluetooth receiver integration
+9. Left and right speaker testing
+10. Full battery-powered system testing
 
-The assembled PCB successfully produced stereo audio during initial bench
-testing.
+Several hardware issues were encountered during bring-up and troubleshooting. These were investigated through continuity measurements, voltage measurements, component inspection, and subsystem testing.
+
+The completed electrical system successfully operates as a rechargeable, battery-powered Bluetooth speaker.
 
 ---
 
-## Hardware Testing
+## Testing
 
-Initial bench testing was performed incrementally to verify each subsystem
-before final enclosure installation.
+Version 2 has undergone subsystem and integrated hardware testing.
 
-Testing completed so far includes:
+Completed testing includes:
 
-- [x] PCB continuity inspection
-- [x] Power and ground continuity checks
-- [x] Initial ~5.1 V supply verification
-- [x] Bluetooth module power-up
-- [x] Bluetooth pairing
-- [x] Left-channel audio verification
-- [x] Right-channel audio verification
-- [x] Stereo speaker operation
-- [ ] Replacement PowerBoost verification
-- [ ] Battery protection integration
-- [ ] Power-switch verification
-- [ ] Charging-system verification
-- [ ] Extended playback testing
-- [ ] Final enclosure testing
+- PCB continuity testing
+- Power and ground verification
+- PowerBoost output testing
+- Bluetooth pairing
+- Left/right audio-channel verification
+- External power-switch operation
+- Battery protection circuit integration
+- Battery-powered operation
+- 15-minute initial playback test
+- 1-hour extended playback test
+- Battery charging test
+- Full-charge verification
+- Simultaneous charging and audio playback
 
-The Bluetooth and audio portions of the system successfully operated during
-bench testing, including simultaneous operation of both speaker channels.
+The system successfully completed approximately one hour of continuous battery-powered playback without abnormal component overheating or unexpected shutdown.
 
-During later power-system testing, abnormal heating was observed in the
-PowerBoost 1000C boost-converter circuitry. Testing was stopped and the
-module was removed from service rather than continuing to operate the
-system under the abnormal condition.
+Following the extended playback test, the battery measured approximately **3.77 V**.
 
-Troubleshooting and test measurements are documented in
-[Hardware_Testing.md](Testing/Hardware_Testing.md).
+Charging functionality was subsequently verified, with the battery reaching approximately **4.18 V** at charge completion.
+
+The speaker was also successfully operated while connected to charging power.
+
+Detailed measurements and test results are documented in the `Testing/` directory.
 
 ---
 
@@ -305,30 +301,40 @@ The transition from Version 1 to Version 2 represents the progression from a fun
 
 ## Current Status
 
-**In Development — Hardware Integration and Testing**
+**Version 2 - Enclosure Integration**
 
 - [x] Version 1 prototype completed
 - [x] Version 2 architecture developed
 - [x] Custom PCB designed
 - [x] PCB routing completed
 - [x] Design Rule Check completed
-- [x] PCB manufactured and received
-- [x] PCB visually inspected
+- [x] PCB manufactured
+- [x] PCB received and inspected
 - [x] Components assembled
-- [x] PCB continuity tested
-- [x] Initial power testing performed
-- [x] Bluetooth module powered and paired
-- [x] Left audio channel tested
-- [x] Right audio channel tested
-- [x] Stereo audio operation verified
-- [x] PowerBoost fault identified during testing
-- [ ] Replacement PowerBoost tested
-- [ ] Battery protection system integrated
-- [ ] Power switch validated
-- [ ] Charging operation validated
-- [ ] Enclosure assembled
-- [ ] Extended playback testing
-- [ ] Final Version 2 validation
+- [x] PCB electrical testing completed
+- [x] Power system integrated
+- [x] Battery protection circuit integrated
+- [x] External power switch tested
+- [x] Bluetooth pairing tested
+- [x] Stereo audio playback verified
+- [x] Integrated battery-powered system tested
+- [x] 15-minute playback test completed
+- [x] 1-hour extended playback test completed
+- [x] Battery charging verified
+- [x] Full-charge operation verified
+- [x] Simultaneous charging and playback verified
+- [x] Enclosure selected
+- [x] Speaker layout evaluated
+- [x] Speaker opening templates created
+- [ ] Speaker openings cut
+- [ ] Speakers mounted
+- [ ] Power switch mounted
+- [ ] Charging-port opening completed
+- [ ] Internal electronics mounted
+- [ ] Final enclosure assembled
+- [ ] Post-assembly functional test
+- [ ] Final extended playback test
+- [ ] Version 2 completed
 ---
 
 ## Next Steps
