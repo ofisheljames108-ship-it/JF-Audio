@@ -307,6 +307,35 @@ During the test:
 
 The Version 2 system successfully supported audio playback while connected to charging power.
 
+## Enclosure and Mechanical Fit Testing
+
+Following successful electrical testing, development progressed to enclosure integration.
+
+The Version 2 enclosure has an approximate internal usable area of:
+
+- Length: **143 mm**
+- Width: **72 mm**
+
+The two speakers were positioned side-by-side on the enclosure lid.
+
+The circular acoustic opening of each speaker was measured at approximately **65 mm diameter**.
+
+Paper templates were created to evaluate speaker opening placement before modifying the enclosure. The templates were positioned on the enclosure lid to verify:
+
+- Speaker spacing
+- Clearance from enclosure edges
+- Clearance from enclosure screw posts
+- Speaker mounting-hole accessibility
+- Available material between the two speaker openings
+
+The actual speaker frames were also compared against the templates to confirm that the circular openings remain within the metal speaker frames while preserving the four mounting locations.
+
+### Status
+
+**IN PROGRESS**
+
+Final speaker-hole cutting, mounting-hole drilling, electronics placement, and enclosure assembly have not yet been completed.
+
 ## Observed Behavior
 
 The following observations were recorded:
