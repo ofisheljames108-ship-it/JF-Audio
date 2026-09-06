@@ -63,6 +63,21 @@ The major sections of the system are:
 
 ---
 
+## Schematics
+
+The Version 2 electrical schematic was developed in EasyEDA and used as the
+basis for the custom PCB design.
+
+The schematic documents the PAM8403 amplifier circuitry, power connections,
+audio inputs, speaker outputs, and supporting passive components.
+
+Additional LTspice files used during design or simulation are included
+separately where applicable.
+
+- [View Schematics](Schematics/)
+
+  ---
+
 ## Custom PCB
 
 One of the primary improvements introduced in Version 2 is the replacement of the Version 1 breadboard with a custom printed circuit board.
