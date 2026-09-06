@@ -336,6 +336,70 @@ The actual speaker frames were also compared against the templates to confirm th
 
 Final speaker-hole cutting, mounting-hole drilling, electronics placement, and enclosure assembly have not yet been completed.
 
+## Enclosure Integration
+
+Following successful electrical and bench testing, the Version 2 electronics
+were installed into the final enclosure.
+
+Mechanical integration included:
+
+- Cutting two circular openings for the left and right speakers
+- Drilling speaker mounting holes
+- Mounting both speakers using mechanical fasteners
+- Cutting an external opening for the charging port
+- Cutting and mounting the external power switch
+- Installing the custom JF Audio PCB
+- Installing the PowerBoost 1000C
+- Installing the 18650 battery system
+- Installing the 1S battery protection module
+- Installing the Bluetooth receiver
+- Routing the internal power, audio, and speaker wiring
+
+Due to limited internal space, several electronic components were mounted
+using double-sided adhesive tape rather than dedicated mechanical mounting
+hardware.
+
+The completed assembly demonstrated that the selected enclosure could
+accommodate the complete Version 2 electrical system, although internal
+component spacing was tighter than anticipated.
+
+### Mechanical Design Observations
+
+Manual modification of the off-the-shelf enclosure resulted in less precise
+speaker and port openings than desired.
+
+This identified an important design improvement for future revisions:
+Version 3 will investigate a custom 3D-printed enclosure with integrated
+component mounting locations, accurately dimensioned speaker openings,
+switch mounting, and charging-port access.
+
+### Result
+
+**ENCLOSURE INTEGRATION: COMPLETE**
+
+## Post-Assembly Extended Playback Test
+
+After installation of the electronics and speakers into the enclosure, the
+completed Version 2 speaker underwent extended Bluetooth playback testing.
+
+The assembled speaker operated continuously for approximately **2.5 hours**.
+
+During the test:
+
+- Bluetooth connectivity remained operational
+- Stereo audio playback continued successfully
+- Both speaker channels remained functional
+- The battery-powered system remained operational
+- No unexpected shutdowns occurred
+
+### Result
+
+**2.5-HOUR POST-ASSEMBLY PLAYBACK TEST: PASS**
+
+Successful operation after enclosure installation confirmed that the
+mechanical assembly did not prevent normal operation of the primary audio
+and power systems.
+
 ## Observed Behavior
 
 The following observations were recorded:
