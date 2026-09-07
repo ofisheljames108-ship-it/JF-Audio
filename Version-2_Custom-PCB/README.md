@@ -159,11 +159,11 @@ and supporting electronics.
 
 ### Speaker Layout and Mounting
 
-![Speaker cutout templates](Enclosure/Photos/Speaker_Cutout_Templates.jpg)
+![Speaker cutout templates](Enclosure_Photos/Speaker_Cutout_Templates.jpg)
 
 *Speaker cutout templates used during enclosure layout and fabrication.*
 
-![Speaker mounting assembly](Enclosure/Photos/Speaker_Mounting_Assembly.jpg)
+![Speaker mounting assembly](Enclosure_Photos/Speaker_Mounting_Assembly.jpg)
 
 *Rear view of the two speakers after mechanical installation.*
 
@@ -172,7 +172,7 @@ and supporting electronics.
 Openings were manually created for the charging connection and external
 power switch.
 
-![Power switch](Enclosure/Photos/Power_Switch_Mounted.jpg)
+![Power switch](Enclosure_Photos/Power_Switch_Mounted.jpg)
 
 *Externally mounted rocker switch used for system power control.*
 
@@ -181,7 +181,7 @@ power switch.
 The internal electronics were installed within the enclosure while
 maintaining access to the power, charging, audio, and speaker connections.
 
-![Internal component layout](Enclosure/Photos/Internal_Component_Layout.jpg)
+![Internal component layout](Enclosure_Photos/Internal_Component_Layout.jpg)
 
 *Final internal arrangement of the Version 2 electronics.*
 
