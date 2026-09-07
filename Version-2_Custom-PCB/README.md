@@ -151,19 +151,50 @@ The custom PCB provides the electrical connections between the Bluetooth receive
 
 ## Enclosure
 
-Version 2 uses a dedicated plastic electronics enclosure rather than the modified food container used in Version 1.
+The Version 2 electronics were integrated into a Hammond 1591D enclosure.
 
-Following successful electrical testing, mechanical integration of the system began.
+The enclosure was selected to provide enough space for the two speakers,
+battery system, PowerBoost 1000C, custom amplifier PCB, Bluetooth receiver,
+and supporting electronics.
 
-The enclosure has an approximate internal usable area of **143 mm × 72 mm**.
+### Speaker Layout and Mounting
 
-The two speakers are being positioned side-by-side on the enclosure lid. Each speaker has an approximately **65 mm circular acoustic opening**.
+![Speaker cutout templates](Enclosure/Photos/Speaker_Cutout_Templates.jpg)
 
-Paper templates were created before cutting the enclosure to verify speaker spacing, mounting-hole clearance, enclosure-edge clearance, and interference with the enclosure screw posts.
+*Speaker cutout templates used during enclosure layout and fabrication.*
 
-The internal electronics will be positioned after the speaker mounting geometry is finalized.
+![Speaker mounting assembly](Enclosure/Photos/Speaker_Mounting_Assembly.jpg)
 
-Mechanical integration is currently in progress.
+*Rear view of the two speakers after mechanical installation.*
+
+### External Interfaces
+
+Openings were manually created for the charging connection and external
+power switch.
+
+![Power switch](Enclosure/Photos/Power_Switch_Mounted.jpg)
+
+*Externally mounted rocker switch used for system power control.*
+
+### Internal Component Integration
+
+The internal electronics were installed within the enclosure while
+maintaining access to the power, charging, audio, and speaker connections.
+
+![Internal component layout](Enclosure/Photos/Internal_Component_Layout.jpg)
+
+*Final internal arrangement of the Version 2 electronics.*
+
+### Mechanical Design Observations
+
+Manual modification of the off-the-shelf enclosure successfully allowed
+the Version 2 electronics to be integrated into a portable package.
+However, the speaker and external-interface openings were more difficult
+to fabricate precisely than anticipated.
+
+These observations motivated a major design goal for Version 3: development
+of a custom 3D-printed enclosure with accurately dimensioned speaker
+openings,
 
 ---
 
