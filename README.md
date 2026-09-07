@@ -51,7 +51,7 @@ Key accomplishments:
 Version 2 replaces the breadboard-based audio circuitry with a custom PCB designed in EasyEDA. The board integrates the PAM8403 stereo audio amplifier, passive components, Bluetooth connections, speaker outputs, and power connections.
 
 <p align="center">
-  <img src="Version-2_Custom-PCB/Enclosure_Photos/Completed_JF_Audio_V2.jpeg" width="600">
+  <img src="Version-2_Custom-PCB/Enclosure_Photos/Completed_JF_Audio_V2.jpg" width="600">
 </p>
 
 The PCB was designed, fabricated, assembled, and tested as part of the development process. Hardware testing is currently ongoing, including power-system integration and troubleshooting.
