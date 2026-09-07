@@ -10,7 +10,7 @@ Version 2 was designed to address these limitations while providing experience w
 
 ---
 
-![Completed JF Audio Version 2](Enclosure/Photos/Completed_JF_Audio_V2.jpg)
+![Completed JF Audio Version 2](Enclosure_Photos/Completed_JF_Audio_V2.jpg)
 
 *Completed JF Audio Version 2 Bluetooth speaker following PCB, power-system,
 and enclosure integration.*
