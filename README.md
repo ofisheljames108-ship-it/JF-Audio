@@ -3,7 +3,7 @@
 A multi-generation Bluetooth speaker engineering project documenting the complete design process from prototype to custom PCB and beyond.
 
 <p align="center">
-  <img src="Version-2_Custom-PCB/Enclosure_Photos/Completed_JF_Audio_V2.jpg" width="600">
+  <img src="Images/JF_Audio_V1_V2_Comparision.jpg" width="600">
 </p>
 
 This project follows the development of a portable Bluetooth speaker through multiple design iterations, beginning with a breadboard prototype and progressing toward a custom PCB-based system.
