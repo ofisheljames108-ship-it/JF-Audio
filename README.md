@@ -3,10 +3,11 @@
 A multi-generation Bluetooth speaker engineering project documenting the complete design process from prototype to custom PCB and beyond.
 
 <p align="center">
-  <img src="Version-1_Prototype/Photos/v1_finished_speaker.jpg" width="600">
+  <img src="Version-2_Custom-PCB/Enclosure_Photos/Completed_JF_Audio_V2.jpg" width="600">
 </p>
 
 This project follows the development of a portable Bluetooth speaker through multiple design iterations, beginning with a breadboard prototype and progressing toward a custom PCB-based system.
+
 ## Project Overview
 
 JF-Audio is a personal electrical engineering project focused on designing and
@@ -54,50 +55,58 @@ Version 2 replaces the breadboard-based audio circuitry with a custom PCB design
   <img src="Version-2_Custom-PCB/Enclosure_Photos/Completed_JF_Audio_V2.jpg" width="600">
 </p>
 
-The PCB was designed, fabricated, assembled, and tested as part of the development process. Hardware testing is currently ongoing, including power-system integration and troubleshooting.
+Version 2 transitioned JF Audio from a breadboard prototype into a custom
+hardware platform.
 
-The design integrates a PAM8403 stereo amplifier IC with the Bluetooth audio
-receiver and introduces a rechargeable lithium-ion power architecture.
+The design introduced a custom PAM8403 amplifier PCB, rechargeable Li-ion
+power system, battery protection, external power control, and a fully
+integrated portable enclosure.
 
-Current accomplishments:
-
-- Custom schematic and PCB designed in EasyEDA
-- PCB manufactured and manually assembled
-- PCB continuity verified
-- Approximately 5.1 V initial power testing completed
-- Bluetooth receiver successfully powered and paired
-- Left audio channel successfully tested
-- Right audio channel successfully tested
-- Stereo audio output successfully demonstrated
-- Hardware bring-up and troubleshooting documented
-
-Current development:
-
-- Adding dedicated 1S lithium-ion battery protection
-- Replacing and retesting the PowerBoost 1000C
-- Completing power-switch integration
-- Completing enclosure assembly
-- Performing final system and extended playback testing
+**Key accomplishments:**
+- Custom PAM8403 amplifier PCB
+- PCB manufacturing and hand assembly
+- Rechargeable 18650 Li-ion power system
+- Battery protection integration
+- PowerBoost 1000C charging and power management
+- External power switch
+- Stereo Bluetooth playback
+- Extended battery-powered playback testing
+- Complete enclosure integration
 
 [View Version 2](Version-2_Custom-PCB/)
 
 ---
 
-### Version 3 — Concept
+### Version 3 — Integrated Product Design
 
-Version 3 is being developed from lessons learned during the design,
-assembly, and testing of Version 2.
+**Planned**
 
-Planned improvements include:
+Version 3 will focus on improving the mechanical and electronic integration
+of JF Audio based on lessons learned during Version 2.
 
-- Improved PCB component spacing
-- Easier access to external solder connections
-- Improved test-point accessibility
-- Better manufacturability and serviceability
-- Improved enclosure integration
-- Further power-system improvements
+Planned development includes:
+- Custom 3D-printed enclosure
+- Purpose-designed component mounting locations
+- Improved external connector integration
+- Physical audio controls
+- Improved audio processing
+- More integrated electronics
 
-[View Version 3 Concepts](Version-3_Concept/)
+### Version 4 — Advanced Embedded Audio System
+
+**Planned**
+
+Version 4 is intended to expand JF Audio into an advanced embedded audio
+platform incorporating DSP, embedded control, system telemetry, display
+integration, and deeper custom electronics.
+
+### Version 5 — Advanced Hardware Platform
+
+**Long-Term Concept**
+
+Version 5 is intended to explore deeper custom hardware development,
+advanced audio processing, custom display electronics, and increasingly
+integrated system architecture.
 
 ---
 
