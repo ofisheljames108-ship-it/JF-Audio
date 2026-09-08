@@ -186,7 +186,7 @@ power switch.
 The internal electronics were installed within the enclosure while
 maintaining access to the power, charging, audio, and speaker connections.
 
-![Internal component layout](Enclosure_Photos/Internal_Component_Layout.jpg)
+![Internal component layout](Enclosure_Photos/Internal_Component_Layout.jpeg)
 
 *Final internal arrangement of the Version 2 electronics.*
 
