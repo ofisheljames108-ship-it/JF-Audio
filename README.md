@@ -110,6 +110,24 @@ integrated system architecture.
 
 ---
 
+## Design Philosophy
+
+JF Audio follows an iterative engineering approach in which each generation
+is used to identify limitations and establish requirements for the next design.
+
+The project progression emphasizes:
+
+- Increasing levels of custom hardware development
+- Improved electrical and mechanical integration
+- PCB design and hardware debugging
+- Power-management and battery-system development
+- Embedded control and digital signal processing
+- Experimental testing and design validation
+- Documentation of both successful designs and engineering challenges
+
+Rather than treating each version as an independent project, lessons learned
+from each generation directly influence the architecture of the next.
+
 ## Development Progress
 
 **Version 1:** Complete  
@@ -142,19 +160,23 @@ This project includes practical experience with:
 
 ---
 
-## Repository Structure
-
-```text
+## Repositiory Structure
 JF-Audio/
 │
 ├── Version-1_Prototype/
 │   └── Original breadboard-based Bluetooth speaker
 │
 ├── Version-2_Custom-PCB/
-│   └── Custom PCB design, hardware testing, and enclosure development
+│   └── Custom PCB, rechargeable power system, testing, and enclosure
 │
 ├── Version-3_Concept/
-│   └── Future design concepts and improvements
+│   └── Integrated electronics and custom enclosure development
+│
+├── Version-4_Concept/
+│   └── Advanced embedded audio, DSP, display, and system control
+│
+├── Version-5_Concept/
+│   └── Advanced custom hardware and system integration
 │
 ├── LICENSE
 └── README.md
