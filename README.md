@@ -30,7 +30,7 @@ design.
 The first version of JF-Audio was constructed using off-the-shelf modules and a breadboard to validate the Bluetooth audio system before designing custom hardware.
 
 <p align="center">
-  <img src="Version-1_Prototype/Photos/v1_internal_layout.jpg" width="600">
+  <img src="Version-1_Prototype/Photos/v1_finished_speaker.jpg" width="600">
 </p>
 
 The prototype was used to verify Bluetooth connectivity, stereo audio output, power distribution, and overall system functionality.
