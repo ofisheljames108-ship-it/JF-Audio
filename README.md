@@ -160,7 +160,9 @@ This project includes practical experience with:
 
 ---
 
-## Repositiory Structure
+## Repository Structure
+
+```text
 JF-Audio/
 │
 ├── Version-1_Prototype/
@@ -178,5 +180,9 @@ JF-Audio/
 ├── Version-5_Concept/
 │   └── Advanced custom hardware and system integration
 │
+├── Images/
+│   └── Project-level images and generation comparisons
+│
 ├── LICENSE
 └── README.md
+```
