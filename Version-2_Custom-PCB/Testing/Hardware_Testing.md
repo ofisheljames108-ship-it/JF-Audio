@@ -507,39 +507,80 @@ playback operation.
 
 ---
 
-# Final System Testing
+## Final System Testing
 
-After the replacement power system is verified, additional testing will include:
+Following installation and verification of the replacement PowerBoost 1000C,
+the integrated Version 2 system underwent additional functional and endurance
+testing.
 
-- [ ] Battery charging test
-- [ ] Extended playback test
-- [ ] Audio noise evaluation
-- [ ] Audio distortion evaluation
-- [ ] Amplifier temperature check
-- [ ] Power-system temperature check
-- [ ] Final wiring inspection
-- [ ] Enclosure installation
-- [ ] Final assembled-system power test
-- [ ] Final Bluetooth test
-- [ ] Final stereo playback test
+Completed testing includes:
+
+- [x] Battery charging test
+- [x] Extended playback test
+- [x] Amplifier temperature check
+- [x] Power-system temperature check
+- [x] Enclosure installation
+- [x] Final assembled-system power test
+- [x] Final Bluetooth test
+- [x] 2.5-hour post-assembly stereo playback test
+- [x] Simultaneous charging and playback test
+
+Remaining final validation:
+
+- [ ] Refine charging-port opening for proper Micro-USB cable clearance
+- [ ] Verify battery charging through the completed enclosure
+- [ ] Verify simultaneous charging and playback through the completed enclosure
+- [ ] Final wiring and mechanical inspection
+- [ ] Final audio noise evaluation
+- [ ] Final audio distortion evaluation
+
+Version 2 will be considered complete after the remaining enclosure-level
+charging and final inspection tests are successfully completed.
 
 ---
 
-# Testing Summary
+## Testing Summary
 
-Initial hardware bring-up successfully demonstrated that the JF Audio Version 2 custom PCB is capable of supporting the intended Bluetooth stereo audio system.
+Version 2 hardware testing successfully demonstrated operation of the custom
+JF Audio PCB and the complete Bluetooth stereo audio system.
 
-Successful testing included:
+Initial PCB bring-up verified:
 
-- PCB continuity verification
+- PCB continuity
 - Approximately 5.1 V regulated power delivery
-- Successful Bluetooth operation and pairing
-- Successful PAM8403 left-channel operation
-- Successful PAM8403 right-channel operation
-- Successful stereo speaker operation
+- Bluetooth receiver operation and pairing
+- PAM8403 left-channel operation
+- PAM8403 right-channel operation
+- Stereo speaker operation
 
-A subsequent issue with the PowerBoost 1000C interrupted further power-system testing. Because abnormal heating was observed, the module was removed from service and will be replaced.
+During early system integration, abnormal heating and operation of the original
+PowerBoost 1000C were observed. The module was removed from service and
+replaced. A dedicated 1S lithium-ion protection module was also incorporated
+into the battery architecture.
 
-The hardware bring-up process also identified an improvement to the battery architecture through the addition of a dedicated 1S lithium-ion protection module.
+Following installation of the replacement PowerBoost, the power system,
+Bluetooth receiver, amplifier, speakers, and external power control were
+successfully retested.
 
-Testing will continue after the replacement PowerBoost is installed and the revised battery protection system is verified.
+Subsequent system testing demonstrated:
+
+- Protected battery-powered operation
+- Stable Bluetooth pairing and stereo playback
+- External power-switch operation
+- Battery charging
+- Simultaneous charging and playback
+- Extended bench playback
+- Complete enclosure integration
+- Approximately 2.5 hours of continuous post-assembly playback
+
+The final enclosure revealed a mechanical clearance issue around the Micro-USB
+charging port. The charging-port opening must be refined to allow the charging
+cable to fully seat before final enclosure-level charging validation can be
+completed.
+
+**Current Status: FINAL INTEGRATION AND VALIDATION**
+
+Remaining work consists of correcting the charging-port clearance, verifying
+charging and simultaneous charging/playback through the completed enclosure,
+performing final audio evaluation, and completing the final electrical and
+mechanical inspection.
