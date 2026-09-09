@@ -108,6 +108,40 @@ Development of Version 3 is expected to involve:
 - Digital audio control and/or signal processing
 - System-level testing and validation
 
+## Testing and Validation Strategy
+
+Version 3 will adopt a more structured testing methodology based on lessons
+learned during the development and documentation of Version 2.
+
+Version 2 demonstrated the importance of recording not only whether a system
+functioned, but also the hardware configuration, test procedure, measured
+results, and criteria used to evaluate performance.
+
+For Version 3, major validation tests will therefore be documented using a
+standard test record containing:
+
+- Date
+- Hardware revision
+- Hardware configuration
+- Test objective
+- Instruments used
+- Test procedure
+- Expected result
+- Measured result
+- Pass/fail criterion
+- Conclusion
+
+This structure will be used throughout electrical bring-up, subsystem
+integration, enclosure validation, and final system testing.
+
+Where appropriate, quantitative measurements such as voltage, current,
+temperature, battery runtime, audio performance, and other relevant system
+parameters will be recorded rather than relying solely on functional
+observations.
+
+The goal is to make Version 3 testing more reproducible, traceable, and useful
+for evaluating design revisions.
+
 ## Planned Validation
 
 Version 3 will undergo structured electrical, mechanical, and functional
