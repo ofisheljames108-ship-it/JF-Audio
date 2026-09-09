@@ -493,32 +493,30 @@ The custom PCB represents one of the largest improvements between the two versio
 
 ---
 
-# Current Status
+## Current Status
 
-- [x] PCB schematic/design completed
-- [x] Component footprints configured
-- [x] Component placement completed
-- [x] PCB routing completed
-- [x] Vias added where required
-- [x] Ground copper implemented
-- [x] Power and speaker trace widths reviewed
-- [x] DRC errors resolved
-- [x] PCB submitted for manufacturing
-- [x] Components ordered
-- [x] Manufactured PCB received
-- [x] PCB visually inspected
-- [x] PCB continuity tested
-- [x] Initial power-up completed
-- [x] Bluetooth functionality tested
-- [x] Left audio channel tested
-- [x] Right audio channel tested
+### PCB Development
+
+- [x] Custom PCB designed
+- [x] PCB design-rule checks completed
+- [x] PCB manufactured
+- [x] PCB assembled
+- [x] Electrical continuity and power testing completed
+- [x] PAM8403 amplifier operation verified
 - [x] Stereo audio operation verified
-- [ ] 1S battery protection module installed
-- [ ] Replacement PowerBoost installed and tested
-- [ ] Rechargeable power system fully tested
-- [ ] Power switch tested
-- [ ] Extended audio testing completed
-- [ ] Final enclosure assembly completed
+
+### System Integration
+
+- [x] Battery protection module integrated
+- [x] Replacement PowerBoost 1000C integrated
+- [x] Extended playback testing completed
+- [x] Enclosure integration completed
+- [ ] Final assembled charging-port validation
+
+> Detailed system-level testing, measurements, and troubleshooting are
+> documented in the Version 2 hardware-testing documentation.
+
+
 ---
 
 # Summary
