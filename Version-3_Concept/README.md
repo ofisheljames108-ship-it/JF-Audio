@@ -187,7 +187,10 @@ Version 3 architecture is finalized.
 
 - [x] Version 2 limitations identified
 - [x] Preliminary Version 3 objectives established
+- [x] Design-for-assembly requirements identified
+- [x] Structured testing methodology established
 - [ ] System architecture finalized
+- [ ] Preliminary mechanical dimensions established
 - [ ] Enclosure CAD developed
 - [ ] Electronic architecture finalized
 - [ ] PCB designed
