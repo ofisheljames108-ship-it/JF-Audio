@@ -184,13 +184,7 @@ JF-Audio/
 │
 ├── Version-3_Concept/
 │   └── Integrated electronics and custom enclosure development
-│
-├── Version-4_Concept/
-│   └── Advanced embedded audio, DSP, display, and system control
-│
-├── Version-5_Concept/
-│   └── Advanced custom hardware and system integration
-│
+|
 ├── Images/
 │   └── Project-level images and generation comparisons
 │
