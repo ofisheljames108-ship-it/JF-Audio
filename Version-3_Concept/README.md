@@ -75,6 +75,25 @@ Additional mechanical requirements include:
 Exact enclosure dimensions and component clearances will be established
 during the CAD and system-layout phases.
 
+## Design for Assembly and Serviceability
+
+Version 3 will place greater emphasis on assembly and maintenance than
+Version 2.
+
+Where practical, the design will incorporate:
+
+- Dedicated mounting features for major electronic components
+- Accessible fasteners
+- Reduced dependence on permanent adhesive mounting
+- Improved cable routing
+- Connector access without major disassembly
+- Replaceable battery and electronic modules where practical
+- PCB placement that permits inspection and troubleshooting
+- Adequate clearance around charging and control interfaces
+
+These requirements are intended to simplify assembly, troubleshooting,
+maintenance, and future hardware revisions.
+
 ## Planned Engineering Areas
 
 Development of Version 3 is expected to involve:
@@ -88,6 +107,45 @@ Development of Version 3 is expected to involve:
 - Bluetooth audio
 - Digital audio control and/or signal processing
 - System-level testing and validation
+
+## Planned Validation
+
+Version 3 will undergo structured electrical, mechanical, and functional
+validation before being considered complete.
+
+Preliminary validation criteria include:
+
+### Electrical
+
+- Verify regulated system power
+- Verify battery charging and protection
+- Verify Bluetooth connectivity
+- Verify left and right audio channels
+- Verify physical user controls
+- Verify status indicators
+- Verify charging during normal system operation
+- Monitor component temperatures during extended operation
+
+### Mechanical
+
+- Verify speaker alignment and mounting
+- Verify PCB and module mounting
+- Verify charging-port and control clearances
+- Verify enclosure closure without wire or component interference
+- Verify access to serviceable components
+- Inspect internal cable routing and strain relief
+
+### System
+
+- Extended continuous playback test
+- Battery-runtime characterization
+- Charging and playback test
+- Audio noise and distortion evaluation
+- User-control functionality test
+- Final assembled-system inspection
+
+Specific quantitative acceptance criteria will be established as the
+Version 3 architecture is finalized.
 
 ## Development Status
 
