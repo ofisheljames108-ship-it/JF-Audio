@@ -463,34 +463,47 @@ This design change was made to improve battery protection and overall power-syst
 
 ---
 
-# Replacement PowerBoost Testing
+## Replacement PowerBoost Testing
 
-The following tests will be performed when the replacement PowerBoost 1000C is installed.
+Following installation of the replacement PowerBoost 1000C, the power,
+audio, and control systems were retested to verify proper operation.
 
-## Power System
+### Power System
 
-- [ ] Verify battery voltage
-- [ ] Verify protected battery output
-- [ ] Verify PowerBoost input voltage
-- [ ] Verify PowerBoost regulated output
-- [ ] Verify PCB supply voltage
-- [ ] Verify voltage across 470 µF bulk capacitor
-- [ ] Check for abnormal component heating
+- [x] Verify battery voltage
+- [x] Verify protected battery output
+- [x] Verify PowerBoost input voltage
+- [x] Verify PowerBoost regulated output
+- [x] Verify PCB supply voltage
+- [x] Verify voltage across 470 µF bulk capacitor
+- [x] Check for abnormal component heating
 
-## Functional Retesting
+### Functional Retesting
 
-- [ ] Verify Bluetooth module power
-- [ ] Verify Bluetooth pairing
-- [ ] Re-test left audio channel
-- [ ] Re-test right audio channel
-- [ ] Verify stereo audio operation
+- [x] Verify Bluetooth module power
+- [x] Verify Bluetooth pairing
+- [x] Re-test left audio channel
+- [x] Re-test right audio channel
+- [x] Verify stereo audio operation
 
-## Power Control
+### Power Control
 
-- [ ] Connect SPST rocker switch to PowerBoost enable control
-- [ ] Verify ON state
-- [ ] Verify OFF state
-- [ ] Confirm correct switch orientation
+- [x] Connect SPST rocker switch to PowerBoost enable control
+- [x] Verify ON state
+- [x] Verify OFF state
+- [x] Confirm correct switch orientation
+
+### Result
+
+The replacement PowerBoost restored normal system operation. The protected
+battery system, regulated power output, Bluetooth receiver, stereo audio
+channels, and external power control were successfully verified.
+
+Subsequent integrated-system testing also demonstrated battery-powered
+playback, battery charging, simultaneous charging and playback, and extended
+playback operation.
+
+**REPLACEMENT POWERBOOST TESTING: PASS**
 
 ---
 
