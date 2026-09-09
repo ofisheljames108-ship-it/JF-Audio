@@ -1,0 +1,18 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal 0 24 -32 -24
+PIN -32 -16 NONE 8
+PINATTR PinName Vcc
+PINATTR SpiceOrder 1
+PIN -32 0 NONE 8
+PINATTR PinName GND
+PINATTR SpiceOrder 2
+PIN 0 -16 NONE 8
+PINATTR PinName L
+PINATTR SpiceOrder 3
+PIN 0 0 NONE 8
+PINATTR PinName R
+PINATTR SpiceOrder 4
+PIN -32 16 NONE 8
+PINATTR PinName Audio GND
+PINATTR SpiceOrder 5
