@@ -352,51 +352,44 @@ The transition from Version 1 to Version 2 represents the progression from a fun
 
 ## Current Status
 
-**Version 2 - Final Testing**
+**Version 2 — Final Integration & Validation**
 
-- [x] Version 2 architecture developed
-- [x] Custom PCB designed
-- [x] PCB manufactured and received
+- [x] System architecture developed
+- [x] Custom PAM8403 amplifier PCB designed
+- [x] PCB manufactured
 - [x] PCB assembled and electrically tested
-- [x] Battery protection system integrated
-- [x] Replacement PowerBoost installed and tested
-- [x] External power switch tested
+- [x] Protected 18650 battery system integrated
+- [x] Replacement PowerBoost 1000C installed and tested
+- [x] External power switch integrated
 - [x] Bluetooth pairing verified
 - [x] Stereo audio playback verified
-- [x] 1-hour bench playback test completed
 - [x] Battery charging verified
-- [x] Full-charge operation verified
 - [x] Simultaneous charging and playback verified
-- [x] Speaker openings cut
-- [x] Speaker mounting holes drilled
-- [x] Speakers mounted
-- [x] Charging-port opening completed
-- [x] External power switch mounted
+- [x] Extended bench playback completed
+- [x] Speaker openings fabricated
+- [x] Speakers mechanically mounted
 - [x] Internal electronics installed
+- [x] External power switch mounted
 - [x] Enclosure assembled
 - [x] 2.5-hour post-assembly playback test completed
-- [ ] Final charging test after enclosure assembly
-- [ ] Final charging + playback test after enclosure assembly
-- [ ] Final inspection
-- [ ] Version 2 completed
+- [ ] Enlarge/refine charging-port opening for proper cable clearance
+- [ ] Verify charging through final enclosure
+- [ ] Verify simultaneous charging and playback through final enclosure
+- [ ] Perform final inspection
+- [ ] Mark Version 2 complete
       
 ## Next Steps
 
-The next stage of Version 2 focuses on completing power-system validation
-and final hardware integration.
+Before Version 2 is considered complete:
 
-Planned work includes:
+1. Refine the charging-port opening to provide sufficient clearance for the
+   Micro-USB cable housing.
+2. Verify normal battery charging with the speaker fully assembled.
+3. Verify simultaneous charging and Bluetooth playback with the speaker fully
+   assembled.
+4. Perform a final electrical, thermal, and mechanical inspection.
+5. Document the completed Version 2 system and transition development to
+   Version 3.
 
-1. Install and independently test the replacement PowerBoost 1000C
-2. Verify stable 5 V output before connecting the remaining electronics
-3. Integrate the battery protection system
-4. Reconnect and test the custom PCB
-5. Verify Bluetooth and stereo audio operation
-6. Validate external power-switch operation
-7. Test battery charging
-8. Install hardware into the enclosure
-9. Perform extended playback and final system testing
-10. Document final measurements and completed assembly
-
-Results from these tests will be added to the hardware-testing documentation
-as development continues.
+Detailed test procedures, measurements, troubleshooting, and validation
+results are available in the [Hardware Testing Documentation](Testing/Hardware_Testing.md).
