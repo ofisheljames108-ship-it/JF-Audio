@@ -49,7 +49,10 @@ Key accomplishments:
 
 ## Version 2 — Custom PCB
 
-Version 2 replaces the breadboard-based audio circuitry with a custom PCB designed in EasyEDA. The board integrates the PAM8403 stereo audio amplifier, passive components, Bluetooth connections, speaker outputs, and power connections.
+Version 2 replaces the breadboard-based audio circuitry with a custom PCB
+designed in EasyEDA. The board integrates the PAM8403 stereo audio amplifier,
+passive components, Bluetooth connections, speaker outputs, and power
+connections.
 
 <p align="center">
   <img src="Version-2_Custom-PCB/Enclosure_Photos/Completed_JF_Audio_V2.jpg" width="600">
@@ -73,8 +76,16 @@ integrated portable enclosure.
 - Extended battery-powered playback testing
 - Complete enclosure integration
 
-[View Version 2](Version-2_Custom-PCB/)
+**Current Status:** Final integration and validation. The assembled system has
+successfully demonstrated Bluetooth connectivity, stereo audio playback,
+battery-powered operation, charging, simultaneous charging and playback, and
+a 2.5-hour post-assembly playback test.
 
+The remaining mechanical issue is improving charging-port clearance to allow
+the Micro-USB cable to fully seat, followed by final assembled charging and
+charge-and-play validation.
+
+[View Version 2](Version-2_Custom-PCB/)
 ---
 
 ### Version 3 — Integrated Product Design
