@@ -45,6 +45,36 @@ Version 3 is expected to explore:
 - Status indicators
 - Improved internal wiring and serviceability
 
+## Preliminary Design Constraints
+
+The final mechanical and electrical dimensions for Version 3 have not yet
+been established. However, several preliminary constraints have been
+identified from Version 2 development.
+
+The enclosure must provide sufficient space and mounting provisions for:
+
+- Two stereo speakers
+- Custom JF Audio PCB
+- Rechargeable lithium-ion battery system
+- Power-management electronics
+- Bluetooth audio hardware
+- External power and user controls
+- USB-C charging interface
+- Internal wiring and connectors
+
+Additional mechanical requirements include:
+
+- Adequate clearance around external connectors
+- Accessible mounting hardware
+- Sufficient spacing for internal wiring
+- Component placement that allows assembly and maintenance
+- Accurate speaker mounting and acoustic openings
+- Separation of mechanical features from sensitive PCB areas
+- Allowance for future PCB revisions
+
+Exact enclosure dimensions and component clearances will be established
+during the CAD and system-layout phases.
+
 ## Planned Engineering Areas
 
 Development of Version 3 is expected to involve:
