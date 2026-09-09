@@ -175,27 +175,33 @@ power input, and external 470 µF bulk capacitor.
 ---
 
 
-# PowerBoost Troubleshooting
+## PowerBoost Troubleshooting
 
-![PowerBoost Troubleshooting](Photos/PowerBoost_Troubleshooting.jpeg)
+During initial Version 2 integration, abnormal PowerBoost behavior was
+observed. The original module exhibited unreliable operation and abnormal
+thermal behavior during testing.
 
-During later testing of the external power-enable circuit, the PowerBoost
-stopped producing the expected boosted output.
+Troubleshooting included voltage measurements, enable-pin testing, battery
+connection checks, and isolation of the PowerBoost from other system
+components.
 
-Troubleshooting measurements included:
+The original PowerBoost was ultimately replaced.
 
-- Battery input: approximately 3.8 V
-- Boosted output: approximately 0 V
-- LOW indicator remained illuminated
-- Abnormal heating was observed near the boost-converter IC
-- No obvious 0-ohm short was measured across the primary power rails
+### Resolution
 
-Because abnormal heating was observed, additional battery-powered testing of
-the module was discontinued.
+A replacement PowerBoost 1000C was installed and subsequently operated
+successfully with the protected battery system.
 
-The exact cause of the failure has not been conclusively determined. A
-replacement PowerBoost 1000C will be installed before additional system-level
-testing is performed.
+Later integrated-system testing verified:
+
+- Stable battery-powered operation
+- External power-switch operation
+- Bluetooth connectivity
+- Stereo audio playback
+- Battery charging
+- Simultaneous charging and playback
+
+**Status: RESOLVED**
 
 ## Integrated System Test
 
@@ -343,25 +349,36 @@ were installed into the final enclosure.
 
 Mechanical integration included:
 
-- Cutting two circular openings for the left and right speakers
-- Drilling speaker mounting holes
-- Mounting both speakers using mechanical fasteners
-- Cutting an external opening for the charging port
-- Cutting and mounting the external power switch
-- Installing the custom JF Audio PCB
-- Installing the PowerBoost 1000C
-- Installing the 18650 battery system
-- Installing the 1S battery protection module
-- Installing the Bluetooth receiver
-- Routing the internal power, audio, and speaker wiring
+- Fabrication of two speaker openings
+- Drilling of speaker mounting holes
+- Mechanical mounting of both speakers
+- Installation of the custom JF Audio PCB
+- Installation of the PowerBoost 1000C
+- Installation of the protected 18650 battery system
+- Installation of the Bluetooth receiver
+- Installation of the external power switch
+- Routing of internal power, audio, and speaker wiring
+- Fabrication of an external charging-port opening
 
 Due to limited internal space, several electronic components were mounted
-using double-sided adhesive tape rather than dedicated mechanical mounting
+using double-sided adhesive rather than dedicated mechanical mounting
 hardware.
 
-The completed assembly demonstrated that the selected enclosure could
-accommodate the complete Version 2 electrical system, although internal
-component spacing was tighter than anticipated.
+### Mechanical Design Observation
+
+The off-the-shelf enclosure required manual fabrication of the speaker,
+switch, and charging-port openings. This resulted in less precise external
+features than desired.
+
+Final assembly also revealed that the charging-port opening does not provide
+sufficient clearance for the molded housing of the Micro-USB charging cable.
+The opening will be refined before Version 2 is considered complete.
+
+This limitation directly informs Version 3, which will use a purpose-designed
+3D-printed enclosure with accurately dimensioned component mounts and
+external-interface openings.
+
+**Status: ASSEMBLY COMPLETE — FINAL CHARGING-PORT REVISION PENDING**
 
 ### Mechanical Design Observations
 
